@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjectAkhir
 {
-    public partial class Form2 : Form
+    public partial class Pembeli : Form
     {
-        public Form2()
+        public Pembeli()
         {
             InitializeComponent();
         }
