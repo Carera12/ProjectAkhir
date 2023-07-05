@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Gudang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gudang.Designer.cs">
+      <DependentUpon>Gudang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu Utama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gudang.resx">
+      <DependentUpon>Gudang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu Utama.resx">
       <DependentUpon>Menu Utama.cs</DependentUpon>
     </EmbeddedResource>
