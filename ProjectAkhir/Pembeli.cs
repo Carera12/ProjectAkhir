@@ -52,11 +52,6 @@ namespace ProjectAkhir
 
         }
 
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
@@ -73,6 +68,11 @@ namespace ProjectAkhir
         }
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
 
         }
