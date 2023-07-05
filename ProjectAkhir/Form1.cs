@@ -16,5 +16,10 @@ namespace ProjectAkhir
         {
             InitializeComponent();
         }
+
+        private void dataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
