@@ -40,12 +40,12 @@
             this.btnOpen = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txtTotBay = new System.Windows.Forms.TextBox();
+            this.txtJumPembe = new System.Windows.Forms.TextBox();
+            this.txtIDPemb = new System.Windows.Forms.TextBox();
+            this.txttglPembe = new System.Windows.Forms.TextBox();
+            this.cmbIDPemb = new System.Windows.Forms.ComboBox();
+            this.cmbObat = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,61 +158,61 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtTotBay
             // 
-            this.textBox1.Location = new System.Drawing.Point(220, 333);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 22);
-            this.textBox1.TabIndex = 14;
+            this.txtTotBay.Location = new System.Drawing.Point(220, 333);
+            this.txtTotBay.Name = "txtTotBay";
+            this.txtTotBay.Size = new System.Drawing.Size(116, 22);
+            this.txtTotBay.TabIndex = 14;
             // 
-            // textBox2
+            // txtJumPembe
             // 
-            this.textBox2.Location = new System.Drawing.Point(220, 298);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(116, 22);
-            this.textBox2.TabIndex = 15;
+            this.txtJumPembe.Location = new System.Drawing.Point(220, 298);
+            this.txtJumPembe.Name = "txtJumPembe";
+            this.txtJumPembe.Size = new System.Drawing.Size(116, 22);
+            this.txtJumPembe.TabIndex = 15;
             // 
-            // textBox3
+            // txtIDPemb
             // 
-            this.textBox3.Location = new System.Drawing.Point(220, 261);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(116, 22);
-            this.textBox3.TabIndex = 16;
+            this.txtIDPemb.Location = new System.Drawing.Point(220, 261);
+            this.txtIDPemb.Name = "txtIDPemb";
+            this.txtIDPemb.Size = new System.Drawing.Size(116, 22);
+            this.txtIDPemb.TabIndex = 16;
             // 
-            // textBox4
+            // txttglPembe
             // 
-            this.textBox4.Location = new System.Drawing.Point(494, 261);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(121, 22);
-            this.textBox4.TabIndex = 17;
+            this.txttglPembe.Location = new System.Drawing.Point(494, 261);
+            this.txttglPembe.Name = "txttglPembe";
+            this.txttglPembe.Size = new System.Drawing.Size(121, 22);
+            this.txttglPembe.TabIndex = 17;
             // 
-            // comboBox1
+            // cmbIDPemb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(494, 298);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 18;
+            this.cmbIDPemb.FormattingEnabled = true;
+            this.cmbIDPemb.Location = new System.Drawing.Point(494, 298);
+            this.cmbIDPemb.Name = "cmbIDPemb";
+            this.cmbIDPemb.Size = new System.Drawing.Size(121, 24);
+            this.cmbIDPemb.TabIndex = 18;
             // 
-            // comboBox2
+            // cmbObat
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(494, 333);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 19;
+            this.cmbObat.FormattingEnabled = true;
+            this.cmbObat.Location = new System.Drawing.Point(494, 333);
+            this.cmbObat.Name = "cmbObat";
+            this.cmbObat.Size = new System.Drawing.Size(121, 24);
+            this.cmbObat.TabIndex = 19;
             // 
             // Pembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cmbObat);
+            this.Controls.Add(this.cmbIDPemb);
+            this.Controls.Add(this.txttglPembe);
+            this.Controls.Add(this.txtIDPemb);
+            this.Controls.Add(this.txtJumPembe);
+            this.Controls.Add(this.txtTotBay);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnOpen);
@@ -247,11 +247,11 @@
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txtTotBay;
+        private System.Windows.Forms.TextBox txtJumPembe;
+        private System.Windows.Forms.TextBox txtIDPemb;
+        private System.Windows.Forms.TextBox txttglPembe;
+        private System.Windows.Forms.ComboBox cmbIDPemb;
+        private System.Windows.Forms.ComboBox cmbObat;
     }
 }
