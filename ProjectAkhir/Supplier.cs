@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace ProjectAkhir
 {
-    public partial class Pegawai : Form
+    public partial class Supplier : Form
     {
-        public Pegawai()
+        public Supplier()
         {
             InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
