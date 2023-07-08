@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Obat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Obat.Designer.cs">
+      <DependentUpon>Obat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gudang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu Utama.resx">
       <DependentUpon>Menu Utama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Obat.resx">
+      <DependentUpon>Obat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pegawai.resx">
       <DependentUpon>Pegawai.cs</DependentUpon>
