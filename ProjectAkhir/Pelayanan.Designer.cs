@@ -56,6 +56,7 @@ namespace ProjectAkhir
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
@@ -178,7 +179,7 @@ namespace ProjectAkhir
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(155, 170);
+            this.label1.Location = new System.Drawing.Point(147, 215);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 25);
             this.label1.TabIndex = 1;
@@ -188,7 +189,7 @@ namespace ProjectAkhir
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(155, 252);
+            this.label3.Location = new System.Drawing.Point(147, 297);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 25);
             this.label3.TabIndex = 3;
@@ -198,7 +199,7 @@ namespace ProjectAkhir
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(158, 295);
+            this.label4.Location = new System.Drawing.Point(150, 340);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 25);
             this.label4.TabIndex = 4;
@@ -208,7 +209,7 @@ namespace ProjectAkhir
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 211);
+            this.label2.Location = new System.Drawing.Point(147, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 25);
             this.label2.TabIndex = 5;
@@ -217,7 +218,7 @@ namespace ProjectAkhir
             // txtIDPL
             // 
             this.txtIDPL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDPL.Location = new System.Drawing.Point(402, 170);
+            this.txtIDPL.Location = new System.Drawing.Point(394, 215);
             this.txtIDPL.Name = "txtIDPL";
             this.txtIDPL.Size = new System.Drawing.Size(159, 30);
             this.txtIDPL.TabIndex = 6;
@@ -225,7 +226,7 @@ namespace ProjectAkhir
             // txtTgl
             // 
             this.txtTgl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTgl.Location = new System.Drawing.Point(402, 211);
+            this.txtTgl.Location = new System.Drawing.Point(394, 256);
             this.txtTgl.Name = "txtTgl";
             this.txtTgl.Size = new System.Drawing.Size(159, 30);
             this.txtTgl.TabIndex = 7;
@@ -233,7 +234,7 @@ namespace ProjectAkhir
             // txtIDPG
             // 
             this.txtIDPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDPG.Location = new System.Drawing.Point(402, 252);
+            this.txtIDPG.Location = new System.Drawing.Point(394, 297);
             this.txtIDPG.Name = "txtIDPG";
             this.txtIDPG.Size = new System.Drawing.Size(159, 30);
             this.txtIDPG.TabIndex = 8;
@@ -241,14 +242,14 @@ namespace ProjectAkhir
             // txtIDPB
             // 
             this.txtIDPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDPB.Location = new System.Drawing.Point(402, 290);
+            this.txtIDPB.Location = new System.Drawing.Point(394, 335);
             this.txtIDPB.Name = "txtIDPB";
             this.txtIDPB.Size = new System.Drawing.Size(159, 30);
             this.txtIDPB.TabIndex = 9;
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(41, 67);
+            this.btnOpen.Location = new System.Drawing.Point(33, 112);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(94, 57);
             this.btnOpen.TabIndex = 10;
@@ -257,7 +258,7 @@ namespace ProjectAkhir
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(160, 67);
+            this.btnAdd.Location = new System.Drawing.Point(152, 112);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(88, 57);
             this.btnAdd.TabIndex = 11;
@@ -266,7 +267,7 @@ namespace ProjectAkhir
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(277, 67);
+            this.btnSave.Location = new System.Drawing.Point(269, 112);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 57);
             this.btnSave.TabIndex = 12;
@@ -275,7 +276,7 @@ namespace ProjectAkhir
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(391, 67);
+            this.btnClear.Location = new System.Drawing.Point(383, 112);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(85, 57);
             this.btnClear.TabIndex = 13;
@@ -284,18 +285,29 @@ namespace ProjectAkhir
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(42, 378);
+            this.btnClose.Location = new System.Drawing.Point(33, 383);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(84, 38);
             this.btnClose.TabIndex = 14;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(27, 57);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(263, 32);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "History Pelayanan";
+            // 
             // Pelayanan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -347,5 +359,6 @@ namespace ProjectAkhir
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label label5;
     }
 }
