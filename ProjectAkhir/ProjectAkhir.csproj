@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pelayanan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pelayanan.Designer.cs">
+      <DependentUpon>Pelayanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Obat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pegawai.resx">
       <DependentUpon>Pegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pelayanan.resx">
+      <DependentUpon>Pelayanan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pemasokkan.resx">
       <DependentUpon>Pemasokkan.cs</DependentUpon>
