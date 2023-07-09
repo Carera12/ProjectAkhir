@@ -150,5 +150,21 @@ namespace ProjectAkhir
             cbxIDG.DataSource = ds.Tables[0];
 
         }
+
+        private void Pegawaicbx()
+        {
+            koneksi.Open();
+            String str = "select ID_Pegawai from dbo.Pegawai";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxIDPG.DisplayMember = "ID_Pegawai";
+            cbxIDPG.ValueMember = "ID_Pegawai";
+            cbxIDPG.DataSource = ds.Tables[0];
+
+        }
     }
 }
