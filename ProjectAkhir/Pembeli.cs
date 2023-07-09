@@ -92,5 +92,10 @@ namespace ProjectAkhir
             mu.ShowDialog();
             this.Close();
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
