@@ -62,6 +62,7 @@ namespace ProjectAkhir
             this.btnOpen.TabIndex = 1;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnAdd
             // 
@@ -71,6 +72,7 @@ namespace ProjectAkhir
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -80,6 +82,7 @@ namespace ProjectAkhir
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -89,6 +92,7 @@ namespace ProjectAkhir
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
             // 
@@ -124,6 +128,7 @@ namespace ProjectAkhir
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(203, 22);
             this.txtID.TabIndex = 8;
+            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtJumlah
             // 
@@ -131,6 +136,7 @@ namespace ProjectAkhir
             this.txtJumlah.Name = "txtJumlah";
             this.txtJumlah.Size = new System.Drawing.Size(203, 22);
             this.txtJumlah.TabIndex = 9;
+            this.txtJumlah.TextChanged += new System.EventHandler(this.txtJumlah_TextChanged);
             // 
             // txtTanggal
             // 
@@ -138,6 +144,7 @@ namespace ProjectAkhir
             this.txtTanggal.Name = "txtTanggal";
             this.txtTanggal.Size = new System.Drawing.Size(200, 22);
             this.txtTanggal.TabIndex = 10;
+            this.txtTanggal.ValueChanged += new System.EventHandler(this.txtTanggal_ValueChanged);
             // 
             // btnClose
             // 

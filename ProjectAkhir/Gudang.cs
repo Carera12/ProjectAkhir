@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjectAkhir
 {
     public partial class Gudang : Form
     {
+
+        private string stringConnection = "data source = MSI\\DAVITPH;" +
+        "database=Disconnected_Environment;User ID = sa; Password = DavitPH21";
+        private SqlConnection koneksi;
+
         public Gudang()
         {
             InitializeComponent();
@@ -27,6 +33,41 @@ namespace ProjectAkhir
             Form1 mu = new Form1();
             mu.ShowDialog();
             this.Close();
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtID_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtJumlah_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTanggal_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
