@@ -55,6 +55,17 @@ namespace ProjectAkhir
 
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "SELECT nama_pembeli, JK, alamat, no_telepon FROM dbo.Pembeli";
+            SqlDataAdapter adapter = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
+        }
+
         private void Pembeli_Load(object sender, EventArgs e)
         {
 
