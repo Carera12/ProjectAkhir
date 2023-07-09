@@ -17,35 +17,12 @@ namespace ProjectAkhir
                 "database=UAS_12B;User ID = sa; Password = DavitPH21";
         private SqlConnection koneksi;
 
-        private string nama, alamat, jk, no;
-        BindingSource customerBindingSource = new BindingSource();
-
         public Pembeli()
         {
-            InitializeComponent();
-            koneksi = new SqlConnection(stringConnection);
-            this.bindingNavigator1.BindingSource = this.customerBindingSource;
-            refreshform();
         }
 
         private void refreshform()
         {
-            txtNama.Enabled = false;
-            txtJK.Enabled = false;
-            txtAlamat.Enabled = false;
-            txtNomer.Enabled = false;
-            btnAdd.Enabled = true;
-            btnSave.Enabled = false;
-            btnClear.Enabled = false;
-            clearBinding();
-        }
-
-        private void clearBinding()
-        {
-            this.txtNama.DataBindings.Clear();
-            this.txtAlamat.DataBindings.Clear();
-            this.txtJK.DataBindings.Clear();
-            this.txtNomer.DataBindings.Clear();
         }
 
         static string GenerateRandomNonRepetitiveString(int size)
@@ -101,6 +78,7 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+
         }
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
