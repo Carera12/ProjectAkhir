@@ -21,6 +21,28 @@ namespace ProjectAkhir
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
+            refreshform()
+        }
+
+        private void refreshform()
+        {
+            txtNama.Text = "";
+            txtNama.Enabled = false;
+
+            cmbJenis.Text = "";
+            cmbJenis.Enabled = false;
+
+            txtHarga.Text = "";
+            txtHarga.Enabled = false;
+
+            txtIDPG.Text = "";
+            txtIDPG.Enabled = false;
+
+            txtIDG.Text = "";
+            txtIDG.Enabled = false;
+
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
