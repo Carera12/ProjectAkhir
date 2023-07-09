@@ -14,12 +14,24 @@ namespace ProjectAkhir
     public partial class Pembeli : Form
     {
         private string stringConnection = "data source = MSI\\DAVITPH;" +
-        "database=UAS_12B;User ID = sa; Password = DavitPH21";
+                "database=UAS_12B;User ID = sa; Password = DavitPH21";
         private SqlConnection koneksi;
 
         public Pembeli()
         {
             InitializeComponent();
+        }
+
+        private void refreshform()
+        {
+            txtID.Enabled = false;
+            txtNama.Enabled = false;
+            txtJK.Enabled = false;
+            txtAlamat.Enabled = false;
+            txtNomer.Enabled = false;
+            btnAdd.Enabled = true;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
         }
 
         private void Pembeli_Load(object sender, EventArgs e)
