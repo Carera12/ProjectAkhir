@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjectAkhir
 {
     public partial class Obat : Form
     {
+        private string stringConnection = "data source = MSI\\DAVITPH;" +
+        "database=UAS_12B;User ID = sa; Password = DavitPH21";
+        private SqlConnection koneksi;
+
         public Obat()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
