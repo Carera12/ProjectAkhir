@@ -19,6 +19,8 @@ namespace ProjectAkhir
 
         public Pembeli()
         {
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void refreshform()
@@ -120,7 +122,8 @@ namespace ProjectAkhir
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-
+            dataGridView();
+            btnOpen.Enabled = false;
         }
     }
 }
