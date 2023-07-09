@@ -150,6 +150,9 @@ namespace ProjectAkhir
             // 
             this.txtJK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtJK.FormattingEnabled = true;
+            this.txtJK.Items.AddRange(new object[] {
+            "L",
+            "P"});
             this.txtJK.Location = new System.Drawing.Point(295, 256);
             this.txtJK.Name = "txtJK";
             this.txtJK.Size = new System.Drawing.Size(252, 33);
