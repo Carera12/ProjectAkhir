@@ -15,7 +15,7 @@ namespace ProjectAkhir
     {
 
         private string stringConnection = "data source = MSI\\DAVITPH;" +
-        "database=Disconnected_Environment;User ID = sa; Password = DavitPH21";
+        "database=UAS_12B;User ID = sa; Password = DavitPH21";
         private SqlConnection koneksi;
 
         private void refreshform()
@@ -36,8 +36,8 @@ namespace ProjectAkhir
         private void dataGridView()
         {
             koneksi.Open();
-            string query = "SELECT ID_Gudang, Jumlah, tgl_masuk FROM dbo.Gudang";
-            SqlDataAdapter adapter = new SqlDataAdapter(query, koneksi);
+            string str = "SELECT ID_Gudang, Jumlah, tgl_masuk FROM dbo.Gudang";
+            SqlDataAdapter adapter = new SqlDataAdapter(str, koneksi);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
             dataGridView1.DataSource = dataTable;
@@ -71,7 +71,11 @@ namespace ProjectAkhir
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
+            txtIDG.Enabled = true;
+            txtJumlah.Enabled = true;
+            txtTanggal.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -81,7 +85,39 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string IDGudang = txtIDG.Text;
+            string Jumlah = txtJumlah.Text;
+            DateTime Tanggal = txtTanggal.Value;
 
+
+            if (IDGudang == "")
+            {
+                MessageBox.Show("Masukkan ID Gudang", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Jumlah == "")
+            {
+                MessageBox.Show("Masukkan Jumlah ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (Tanggal == DateTime.MinValue)
+            {
+                MessageBox.Show("Masukkan Tanggal", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string str = "insert into dbo.Gudang (ID_Gudang, Jumlah, tgl_masuk)" + "values(@ID_Gudang, @Jumlah, @tgl_masuk)";
+                SqlCommand cmd = new SqlCommand(str, koneksi);
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.Add(new SqlParameter("ID_Gudang", IDGudang));
+                cmd.Parameters.Add(new SqlParameter("Jumlah",Jumlah));
+                cmd.Parameters.Add(new SqlParameter("tgl_masuk", Tanggal));
+                cmd.ExecuteNonQuery();
+
+                koneksi.Close();
+                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+            }
         }
 
         private void txtID_TextChanged(object sender, EventArgs e)
@@ -105,6 +141,11 @@ namespace ProjectAkhir
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtIDG_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -34,15 +34,15 @@ namespace ProjectAkhir
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtIDG = new System.Windows.Forms.TextBox();
             this.txtJumlah = new System.Windows.Forms.TextBox();
             this.txtTanggal = new System.Windows.Forms.DateTimePicker();
             this.btnClose = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtIDG = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -107,17 +107,6 @@ namespace ProjectAkhir
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 255);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "ID Gudang";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -140,14 +129,6 @@ namespace ProjectAkhir
             this.label3.TabIndex = 7;
             this.label3.Text = "Tanggal Masuk";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // txtIDG
-            // 
-            this.txtIDG.Location = new System.Drawing.Point(171, 252);
-            this.txtIDG.Name = "txtIDG";
-            this.txtIDG.Size = new System.Drawing.Size(203, 22);
-            this.txtIDG.TabIndex = 8;
-            this.txtIDG.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtJumlah
             // 
@@ -198,17 +179,36 @@ namespace ProjectAkhir
             this.panel1.TabIndex = 12;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(31, 255);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(76, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "ID Gudang";
+            // 
+            // txtIDG
+            // 
+            this.txtIDG.Location = new System.Drawing.Point(171, 252);
+            this.txtIDG.Name = "txtIDG";
+            this.txtIDG.Size = new System.Drawing.Size(203, 22);
+            this.txtIDG.TabIndex = 13;
+            this.txtIDG.TextChanged += new System.EventHandler(this.txtIDG_TextChanged);
+            // 
             // Gudang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtIDG);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtTanggal);
             this.Controls.Add(this.txtJumlah);
-            this.Controls.Add(this.txtIDG);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -235,14 +235,14 @@ namespace ProjectAkhir
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtIDG;
         private System.Windows.Forms.TextBox txtJumlah;
         private System.Windows.Forms.DateTimePicker txtTanggal;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtIDG;
     }
 }
