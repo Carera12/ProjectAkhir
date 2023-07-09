@@ -23,6 +23,20 @@ namespace ProjectAkhir
 
         private void refreshform()
         {
+            txtNama.Text = "";
+            txtNama.Enabled = false;
+
+            txtJK.Text = "";
+            txtJK.Enabled = false;
+
+            txtAlamat.Text = "";
+            txtAlamat.Enabled = false;
+
+            txtNomer.Text = "";
+            txtNomer.Enabled = false;
+
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
         }
 
         static string GenerateRandomNonRepetitiveString(int size)
