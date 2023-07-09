@@ -74,7 +74,7 @@ namespace ProjectAkhir
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-
+            refreshform();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
