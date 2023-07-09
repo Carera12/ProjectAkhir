@@ -43,8 +43,10 @@ namespace ProjectAkhir
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDG = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -114,9 +116,9 @@ namespace ProjectAkhir
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label2.BackColor = System.Drawing.SystemColors.Control;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(31, 296);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 17);
@@ -126,9 +128,9 @@ namespace ProjectAkhir
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label3.BackColor = System.Drawing.SystemColors.Control;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(31, 340);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(118, 17);
@@ -189,9 +191,9 @@ namespace ProjectAkhir
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(31, 255);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
@@ -206,11 +208,22 @@ namespace ProjectAkhir
             this.txtIDG.TabIndex = 13;
             this.txtIDG.TextChanged += new System.EventHandler(this.txtIDG_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProjectAkhir.Properties.Resources.Cemara;
+            this.pictureBox1.Location = new System.Drawing.Point(-112, -39);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1007, 605);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Gudang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGreen;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtIDG);
             this.Controls.Add(this.panel1);
@@ -225,12 +238,14 @@ namespace ProjectAkhir
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Gudang";
             this.Text = "Gudang";
             this.Load += new System.EventHandler(this.Gudang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,5 +267,6 @@ namespace ProjectAkhir
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDG;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
