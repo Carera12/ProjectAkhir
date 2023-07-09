@@ -33,6 +33,17 @@ namespace ProjectAkhir
             btnClear.Enabled = false;
         }
 
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string query = "SELECT ID_Gudang, Jumlah, tgl_masuk FROM dbo.Gudang";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, koneksi);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
+        }
+
         public Gudang()
         {
             InitializeComponent();
