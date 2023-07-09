@@ -19,12 +19,14 @@ namespace ProjectAkhir
 
         public Pembeli()
         {
+            InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
             refreshform();
         }
 
         private void refreshform()
         {
+
             txtNama.Text = "";
             txtNama.Enabled = false;
 
@@ -36,6 +38,9 @@ namespace ProjectAkhir
 
             txtNomer.Text = "";
             txtNomer.Enabled = false;
+
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
 
             btnSave.Enabled = false;
             btnClear.Enabled = false;
@@ -111,6 +116,49 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string nm = txtNama.Text;
+            string jk = txtJK.Text;
+            string alamat = txtAlamat.Text;
+            string no = txtNomer.Text;
+
+            if (nm == "")
+            {
+                MessageBox.Show("Masukkan Nama Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (jk =="")
+            {
+                MessageBox.Show("Masukkan Jenis Kelamin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (alamat == "")
+            {
+                MessageBox.Show("Masukkan Alamat Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (no == "")
+            {
+                MessageBox.Show("Masukkan Nomer Telepon Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                koneksi.Open();
+                string randomCode = GenerateRandomNonRepetitiveString(5);
+
+                string str = "INSERT INTO dbo.Prodi (ID_Pembeli, nama_pembeli, JK, alamat, nomer_telepon)" + "VALUES(@randomcode, @nama_pembeli, @JK, @alamat, @nomer_telepon)";
+                using (SqlCommand command = new SqlCommand(str, koneksi))
+                {
+                    command.Parameters.Add("@randomcode", SqlDbType.VarChar).Value = randomCode;
+                    command.Parameters.Add("@nama_pembeli", SqlDbType.VarChar).Value = nm;
+                    command.Parameters.Add("@JK", SqlDbType.VarChar).Value = jk;
+                    command.Parameters.Add("@alamat", SqlDbType.VarChar).Value = alamat;
+                    command.Parameters.Add("@nommer_pembeli", SqlDbType.VarChar).Value = no;
+                    command.ExecuteNonQuery();
+                }
+
+                koneksi.Close();
+                MessageBox.Show("Data Have been added", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dataGridView();
+                refreshform();
+
+            }
 
         }
 
