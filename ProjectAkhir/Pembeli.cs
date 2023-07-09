@@ -17,6 +17,9 @@ namespace ProjectAkhir
                 "database=UAS_12B;User ID = sa; Password = DavitPH21";
         private SqlConnection koneksi;
 
+        private string nama, alamat, jk, no;
+        BindingSource customerBindingSource = new BindingSource();
+
         public Pembeli()
         {
             InitializeComponent();
