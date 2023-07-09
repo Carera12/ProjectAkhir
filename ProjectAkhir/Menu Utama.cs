@@ -19,7 +19,9 @@ namespace ProjectAkhir
 
         private void dataToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Supplier sp = new Supplier();
+            sp.ShowDialog();
+            this.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)

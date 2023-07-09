@@ -64,7 +64,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(360, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 16);
+            this.label2.Size = new System.Drawing.Size(56, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID Obat";
             // 
@@ -73,7 +73,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(360, 301);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
+            this.label3.Size = new System.Drawing.Size(75, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "ID Pembeli";
             // 
@@ -82,7 +82,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(360, 264);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 16);
+            this.label4.Size = new System.Drawing.Size(130, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tanggal Pembelian";
             // 
@@ -91,7 +91,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(95, 336);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.Size = new System.Drawing.Size(81, 17);
             this.label5.TabIndex = 5;
             this.label5.Text = "Total Bayar";
             // 
@@ -100,7 +100,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(95, 301);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 16);
+            this.label6.Size = new System.Drawing.Size(122, 17);
             this.label6.TabIndex = 6;
             this.label6.Text = "Jumlah pembelian";
             // 
@@ -109,7 +109,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(95, 264);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 16);
+            this.label7.Size = new System.Drawing.Size(91, 17);
             this.label7.TabIndex = 7;
             this.label7.Text = "ID Pembelian";
             // 
@@ -157,6 +157,7 @@
             this.btnClose.TabIndex = 13;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // txtTotBay
             // 

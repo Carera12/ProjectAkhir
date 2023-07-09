@@ -147,6 +147,7 @@ namespace ProjectAkhir
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Gudang
             // 
@@ -167,6 +168,7 @@ namespace ProjectAkhir
             this.Controls.Add(this.dataGridView1);
             this.Name = "Gudang";
             this.Text = "Gudang";
+            this.Load += new System.EventHandler(this.Gudang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

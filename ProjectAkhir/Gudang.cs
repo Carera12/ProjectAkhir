@@ -16,5 +16,17 @@ namespace ProjectAkhir
         {
             InitializeComponent();
         }
+
+        private void Gudang_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Form1 mu = new Form1();
+            mu.ShowDialog();
+            this.Close();
+        }
     }
 }
