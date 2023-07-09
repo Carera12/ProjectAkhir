@@ -86,7 +86,8 @@ namespace ProjectAkhir
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-
+            dataGridView();
+            btnOpen.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
