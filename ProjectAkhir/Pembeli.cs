@@ -23,6 +23,9 @@ namespace ProjectAkhir
         public Pembeli()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            this.bindingNavigator1.BindingSource = this.customerBindingSource;
+            refreshform();
         }
 
         private void refreshform()
