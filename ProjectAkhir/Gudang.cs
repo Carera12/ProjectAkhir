@@ -36,6 +36,8 @@ namespace ProjectAkhir
         public Gudang()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void Gudang_Load(object sender, EventArgs e)
