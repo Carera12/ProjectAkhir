@@ -24,7 +24,6 @@ namespace ProjectAkhir
 
         private void refreshform()
         {
-            txtID.Enabled = false;
             txtNama.Enabled = false;
             txtJK.Enabled = false;
             txtAlamat.Enabled = false;
@@ -32,14 +31,18 @@ namespace ProjectAkhir
             btnAdd.Enabled = true;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
+            clearBinding();
+        }
+
+        private void clearBinding()
+        {
+            this.txtNama.DataBindings.Clear();
+            this.txtAlamat.DataBindings.Clear();
+            this.txtJK.DataBindings.Clear();
+            this.txtNomer.DataBindings.Clear();
         }
 
         private void Pembeli_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtID_TextChanged(object sender, EventArgs e)
         {
 
         }
