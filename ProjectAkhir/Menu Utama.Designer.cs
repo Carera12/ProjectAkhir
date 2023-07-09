@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.dataPembeliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +39,7 @@
             this.dataTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPelayananToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataPemasokanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,16 +54,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(800, 27);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjectAkhir.Properties.Resources.Cemara;
-            this.pictureBox1.Location = new System.Drawing.Point(115, 51);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(530, 360);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // toolStripDropDownButton1
             // 
@@ -138,6 +128,17 @@
             this.dataPemasokanToolStripMenuItem.Size = new System.Drawing.Size(202, 26);
             this.dataPemasokanToolStripMenuItem.Text = "Data Pemasokan";
             this.dataPemasokanToolStripMenuItem.Click += new System.EventHandler(this.dataPemasokanToolStripMenuItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(128, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(520, 382);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
