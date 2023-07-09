@@ -54,7 +54,8 @@ namespace ProjectAkhir
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-
+            dataGridView();
+            btnOpen.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -83,6 +84,16 @@ namespace ProjectAkhir
         }
 
         private void txtTanggal_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
