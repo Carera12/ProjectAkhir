@@ -22,6 +22,7 @@ namespace ProjectAkhir
             Supplier sp = new Supplier();
             sp.ShowDialog();
             this.Close();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace ProjectAkhir
             Pembeli pb = new Pembeli();
             pb.ShowDialog();
             this.Close();
+
         }
 
         private void dataPegawaiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,13 +47,16 @@ namespace ProjectAkhir
 
         private void dataObatToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             Obat ob = new Obat();
             ob.ShowDialog();
+
             this.Close();
         }
 
         private void dataGudangToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             Gudang gd = new Gudang();
             gd.ShowDialog();
             this.Close();
@@ -59,6 +64,7 @@ namespace ProjectAkhir
 
         private void dataTransaksiToolStripMenuItem_Click(object sender, EventArgs e)
         {
+ 
             Pembelian pbn = new Pembelian();
             pbn.ShowDialog();
             this.Close();
@@ -66,6 +72,7 @@ namespace ProjectAkhir
 
         private void dataPelayananToolStripMenuItem_Click(object sender, EventArgs e)
         {
+ 
             Pelayanan pln = new Pelayanan();
             pln.ShowDialog();
             this.Close();
@@ -73,6 +80,7 @@ namespace ProjectAkhir
 
         private void dataPemasokanToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
             Pemasokkan pmn = new Pemasokkan();
             pmn.ShowDialog();
             this.Close();
