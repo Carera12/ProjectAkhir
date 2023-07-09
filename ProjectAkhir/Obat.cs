@@ -21,7 +21,7 @@ namespace ProjectAkhir
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            refreshform()
+            refreshform();
         }
 
         private void refreshform()
@@ -44,6 +44,17 @@ namespace ProjectAkhir
             btnSave.Enabled = false;
             btnClear.Enabled = false;
         }
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "SELECT ID_Gudang, Jumlah, tgl_masuk FROM dbo.Gudang";
+            SqlDataAdapter adapter = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
+        }
+
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
