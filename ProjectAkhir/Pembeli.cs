@@ -95,7 +95,13 @@ namespace ProjectAkhir
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            txtNama.Enabled = true;
+            txtJK.Enabled = true;
+            txtAlamat.Enabled = true;
+            txtNomer.Enabled = true;
 
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -104,11 +110,6 @@ namespace ProjectAkhir
         }
 
         private void btnSave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
         {
 
         }
