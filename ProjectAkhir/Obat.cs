@@ -134,5 +134,21 @@ namespace ProjectAkhir
         {
 
         }
+
+        private void Gudangcbx()
+        {
+            koneksi.Open();
+            String str = "select ID_Gudang from dbo.Gudang";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cbxIDG.DisplayMember = "ID_Gudang";
+            cbxIDG.ValueMember = "ID_GUdang";
+            cbxIDG.DataSource = ds.Tables[0];
+
+        }
     }
 }
