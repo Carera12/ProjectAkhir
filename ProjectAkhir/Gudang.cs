@@ -18,6 +18,21 @@ namespace ProjectAkhir
         "database=Disconnected_Environment;User ID = sa; Password = DavitPH21";
         private SqlConnection koneksi;
 
+        private void refreshform()
+        {
+            txtIDG.Text = "";
+            txtIDG.Enabled = false;
+
+            txtJumlah.Text = "";
+            txtJumlah.Enabled = false;
+
+            txtTanggal.Text = "";
+            txtTanggal.Enabled = false;
+
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+        }
+
         public Gudang()
         {
             InitializeComponent();

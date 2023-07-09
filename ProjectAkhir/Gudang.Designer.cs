@@ -37,7 +37,7 @@ namespace ProjectAkhir
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtIDG = new System.Windows.Forms.TextBox();
             this.txtJumlah = new System.Windows.Forms.TextBox();
             this.txtTanggal = new System.Windows.Forms.DateTimePicker();
             this.btnClose = new System.Windows.Forms.Button();
@@ -122,13 +122,13 @@ namespace ProjectAkhir
             this.label3.Text = "Tanggal Masuk";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // txtID
+            // txtIDG
             // 
-            this.txtID.Location = new System.Drawing.Point(163, 202);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(203, 22);
-            this.txtID.TabIndex = 8;
-            this.txtID.TextChanged += new System.EventHandler(this.txtID_TextChanged);
+            this.txtIDG.Location = new System.Drawing.Point(163, 202);
+            this.txtIDG.Name = "txtIDG";
+            this.txtIDG.Size = new System.Drawing.Size(203, 22);
+            this.txtIDG.TabIndex = 8;
+            this.txtIDG.TextChanged += new System.EventHandler(this.txtID_TextChanged);
             // 
             // txtJumlah
             // 
@@ -164,7 +164,7 @@ namespace ProjectAkhir
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtTanggal);
             this.Controls.Add(this.txtJumlah);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtIDG);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -192,7 +192,7 @@ namespace ProjectAkhir
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtIDG;
         private System.Windows.Forms.TextBox txtJumlah;
         private System.Windows.Forms.DateTimePicker txtTanggal;
         private System.Windows.Forms.Button btnClose;
