@@ -35,11 +35,11 @@ namespace ProjectAkhir
             txtHarga.Text = "";
             txtHarga.Enabled = false;
 
-            txtIDPG.Text = "";
-            txtIDPG.Enabled = false;
+            cbxIDPG.Text = "";
+            cbxIDPG.Enabled = false;
 
-            txtIDG.Text = "";
-            txtIDG.Enabled = false;
+            cbxIDG.Text = "";
+            cbxIDG.Enabled = false;
 
             btnSave.Enabled = false;
             btnClear.Enabled = false;
@@ -92,7 +92,12 @@ namespace ProjectAkhir
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            txtNama.Enabled = true;
+            txtHarga.Enabled = true;
+            cmbJenis.Enabled = true;
 
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -120,12 +125,12 @@ namespace ProjectAkhir
 
         }
 
-        private void txtIDPG_TextChanged(object sender, EventArgs e)
+        private void cbxIDPG_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void txtIDG_TextChanged(object sender, EventArgs e)
+        private void cbxIDG_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

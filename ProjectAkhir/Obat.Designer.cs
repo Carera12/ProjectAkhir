@@ -38,8 +38,6 @@ namespace ProjectAkhir
             this.label6 = new System.Windows.Forms.Label();
             this.cmbJenis = new System.Windows.Forms.ComboBox();
             this.txtNama = new System.Windows.Forms.TextBox();
-            this.txtIDPG = new System.Windows.Forms.TextBox();
-            this.txtIDG = new System.Windows.Forms.TextBox();
             this.txtHarga = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -48,6 +46,8 @@ namespace ProjectAkhir
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbxIDPG = new System.Windows.Forms.ComboBox();
+            this.cbxIDG = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -142,24 +142,6 @@ namespace ProjectAkhir
             this.txtNama.TabIndex = 10;
             this.txtNama.TextChanged += new System.EventHandler(this.txtNama_TextChanged);
             // 
-            // txtIDPG
-            // 
-            this.txtIDPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDPG.Location = new System.Drawing.Point(365, 320);
-            this.txtIDPG.Name = "txtIDPG";
-            this.txtIDPG.Size = new System.Drawing.Size(168, 30);
-            this.txtIDPG.TabIndex = 12;
-            this.txtIDPG.TextChanged += new System.EventHandler(this.txtIDPG_TextChanged);
-            // 
-            // txtIDG
-            // 
-            this.txtIDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDG.Location = new System.Drawing.Point(365, 360);
-            this.txtIDG.Name = "txtIDG";
-            this.txtIDG.Size = new System.Drawing.Size(168, 30);
-            this.txtIDG.TabIndex = 13;
-            this.txtIDG.TextChanged += new System.EventHandler(this.txtIDG_TextChanged);
-            // 
             // txtHarga
             // 
             this.txtHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,18 +223,38 @@ namespace ProjectAkhir
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // cbxIDPG
+            // 
+            this.cbxIDPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxIDPG.FormattingEnabled = true;
+            this.cbxIDPG.Location = new System.Drawing.Point(365, 320);
+            this.cbxIDPG.Name = "cbxIDPG";
+            this.cbxIDPG.Size = new System.Drawing.Size(168, 33);
+            this.cbxIDPG.TabIndex = 23;
+            this.cbxIDPG.SelectedIndexChanged += new System.EventHandler(this.cbxIDPG_SelectedIndexChanged);
+            // 
+            // cbxIDG
+            // 
+            this.cbxIDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxIDG.FormattingEnabled = true;
+            this.cbxIDG.Location = new System.Drawing.Point(365, 363);
+            this.cbxIDG.Name = "cbxIDG";
+            this.cbxIDG.Size = new System.Drawing.Size(168, 33);
+            this.cbxIDG.TabIndex = 24;
+            this.cbxIDG.SelectedIndexChanged += new System.EventHandler(this.cbxIDG_SelectedIndexChanged);
+            // 
             // Obat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbxIDG);
+            this.Controls.Add(this.cbxIDPG);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtHarga);
-            this.Controls.Add(this.txtIDG);
-            this.Controls.Add(this.txtIDPG);
             this.Controls.Add(this.txtNama);
             this.Controls.Add(this.cmbJenis);
             this.Controls.Add(this.label6);
@@ -287,8 +289,6 @@ namespace ProjectAkhir
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbJenis;
         private System.Windows.Forms.TextBox txtNama;
-        private System.Windows.Forms.TextBox txtIDPG;
-        private System.Windows.Forms.TextBox txtIDG;
         private System.Windows.Forms.TextBox txtHarga;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnSave;
@@ -297,5 +297,7 @@ namespace ProjectAkhir
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cbxIDPG;
+        private System.Windows.Forms.ComboBox cbxIDG;
     }
 }
