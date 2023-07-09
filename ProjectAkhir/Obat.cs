@@ -96,6 +96,9 @@ namespace ProjectAkhir
             txtHarga.Enabled = true;
             cmbJenis.Enabled = true;
 
+            Gudangcbx();
+            Pegawaicbx();
+
             btnSave.Enabled = true;
             btnClear.Enabled = true;
         }
