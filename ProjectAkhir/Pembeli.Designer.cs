@@ -51,9 +51,9 @@ namespace ProjectAkhir
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(621, 165);
+            this.btnAdd.Location = new System.Drawing.Point(621, 279);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(110, 46);
+            this.btnAdd.Size = new System.Drawing.Size(64, 58);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -61,9 +61,9 @@ namespace ProjectAkhir
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(621, 243);
+            this.btnClear.Location = new System.Drawing.Point(711, 209);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(110, 48);
+            this.btnClear.Size = new System.Drawing.Size(64, 60);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -71,9 +71,9 @@ namespace ProjectAkhir
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(621, 315);
+            this.btnSave.Location = new System.Drawing.Point(711, 281);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(110, 47);
+            this.btnSave.Size = new System.Drawing.Size(64, 59);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -192,18 +192,18 @@ namespace ProjectAkhir
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(110, 74);
+            this.dataGridView1.Location = new System.Drawing.Point(29, 74);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(437, 99);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 99);
             this.dataGridView1.TabIndex = 17;
             // 
             // btnOpen
             // 
-            this.btnOpen.Location = new System.Drawing.Point(621, 95);
+            this.btnOpen.Location = new System.Drawing.Point(621, 209);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(110, 49);
+            this.btnOpen.Size = new System.Drawing.Size(64, 61);
             this.btnOpen.TabIndex = 18;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;

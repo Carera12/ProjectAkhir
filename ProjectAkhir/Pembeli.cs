@@ -65,7 +65,7 @@ namespace ProjectAkhir
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "SELECT nama_pembeli, JK, alamat, no_telepon FROM dbo.Pembeli";
+            string str = "SELECT ID_Pembeli, nama_pembeli, JK, alamat, no_telepon FROM dbo.Pembeli";
             SqlDataAdapter adapter = new SqlDataAdapter(str, koneksi);
             DataTable dataTable = new DataTable();
             adapter.Fill(dataTable);
@@ -116,16 +116,16 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string nm = txtNama.Text;
-            string jk = txtJK.Text;
+            string nama_pembeli = txtNama.Text;
+            string JK = txtJK.Text;
             string alamat = txtAlamat.Text;
-            string no = txtNomer.Text;
+            string no_telepon = txtNomer.Text;
 
-            if (nm == "")
+            if (nama_pembeli == "")
             {
                 MessageBox.Show("Masukkan Nama Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (jk =="")
+            else if (JK == "")
             {
                 MessageBox.Show("Masukkan Jenis Kelamin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -133,7 +133,7 @@ namespace ProjectAkhir
             {
                 MessageBox.Show("Masukkan Alamat Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else if (no == "")
+            else if (no_telepon == "")
             {
                 MessageBox.Show("Masukkan Nomer Telepon Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -142,25 +142,25 @@ namespace ProjectAkhir
                 koneksi.Open();
                 string randomCode = GenerateRandomNonRepetitiveString(5);
 
-                string str = "INSERT INTO dbo.Prodi (ID_Pembeli, nama_pembeli, JK, alamat, nomer_telepon)" + "VALUES(@randomcode, @nama_pembeli, @JK, @alamat, @nomer_telepon)";
+                string str = "INSERT INTO dbo.Pembeli (ID_Pembeli, nama_pembeli, JK, alamat, no_telepon)" + "VALUES(@ID_Pembeli, @nama_pembeli, @JK, @alamat, @no_telepon)";
                 using (SqlCommand command = new SqlCommand(str, koneksi))
                 {
-                    command.Parameters.Add("@randomcode", SqlDbType.VarChar).Value = randomCode;
-                    command.Parameters.Add("@nama_pembeli", SqlDbType.VarChar).Value = nm;
-                    command.Parameters.Add("@JK", SqlDbType.VarChar).Value = jk;
+                    command.Parameters.Add("@ID_Pembeli", SqlDbType.VarChar).Value = randomCode;
+                    command.Parameters.Add("@nama_pembeli", SqlDbType.VarChar).Value = nama_pembeli;
+                    command.Parameters.Add("@JK", SqlDbType.VarChar).Value = JK;
                     command.Parameters.Add("@alamat", SqlDbType.VarChar).Value = alamat;
-                    command.Parameters.Add("@nommer_pembeli", SqlDbType.VarChar).Value = no;
+                    command.Parameters.Add("@no_telepon", SqlDbType.VarChar).Value = no_telepon;
                     command.ExecuteNonQuery();
                 }
 
                 koneksi.Close();
-                MessageBox.Show("Data Have been added", "success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data Have been added", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridView();
                 refreshform();
 
             }
-
         }
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {
