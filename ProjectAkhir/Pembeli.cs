@@ -48,6 +48,22 @@ namespace ProjectAkhir
             this.txtNomer.DataBindings.Clear();
         }
 
+        static string GenerateRandomNonRepetitiveString(int size)
+        {
+            Random random = new Random();
+            const string chars = "123456789abcdef";
+            char[] hexChars = new char[size];
+
+            for (int i = 0; i < size; i++)
+            {
+                hexChars[i] = chars[random.Next(chars.Length)];
+
+            }
+
+            return new string(hexChars);
+
+        }
+
         private void Pembeli_Load(object sender, EventArgs e)
         {
 
@@ -85,7 +101,6 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
         }
 
         private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
