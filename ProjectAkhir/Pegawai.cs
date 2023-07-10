@@ -24,5 +24,27 @@ namespace ProjectAkhir
             Form1 mu = new Form1();
             mu.ShowDialog();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            txtIDPeg.Text = "";
+            txtNamaPeg.Text = "";
+            txtAlmt.Text = "";
+            txtNoTlp.Text = "";
+            txtIDPeg.Enabled = true;
+            txtNamaPeg.Enabled = true;
+            cmbJK.Enabled = true;
+            txtAlmt.Enabled = true;
+            txtAlmt.Enabled = true;
+            txtNoTlp.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+            btnAdd.Enabled = false;
+        }
     }
 }
