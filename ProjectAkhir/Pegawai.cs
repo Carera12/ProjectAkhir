@@ -15,8 +15,7 @@ namespace ProjectAkhir
     {
         private string stringConnection = "Data Source=RARAIMUT\\CANDRARAKU;Initial Catalog=Aktivity6PABD;Persist Security Info=True;User ID=sa;Password=Rera1234";
         private SqlConnection koneksi;
-        private string nim, nama, alamat, jk, prodi;
-        private DateTime tgl;
+        private string id, nama, alamat, jk, notlp;
         BindingSource customersBindingSource = new BindingSource();
 
         public Pegawai()
@@ -104,7 +103,7 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }
