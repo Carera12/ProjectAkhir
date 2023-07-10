@@ -21,6 +21,9 @@ namespace ProjectAkhir
         public Pegawai()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            this.bnPegawai.BindingSource = this.customersBindingSource;
+            refreshform();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

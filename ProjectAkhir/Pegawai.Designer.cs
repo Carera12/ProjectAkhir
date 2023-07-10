@@ -46,7 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cmbJK = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bnPegawai = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -60,8 +60,8 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bnPegawai)).BeginInit();
+            this.bnPegawai.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,13 +220,13 @@
             this.panel1.Size = new System.Drawing.Size(800, 83);
             this.panel1.TabIndex = 15;
             // 
-            // bindingNavigator1
+            // bnPegawai
             // 
-            this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
-            this.bindingNavigator1.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bnPegawai.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bnPegawai.CountItem = this.bindingNavigatorCountItem;
+            this.bnPegawai.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.bnPegawai.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.bnPegawai.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -238,16 +238,16 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 83);
-            this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(800, 27);
-            this.bindingNavigator1.TabIndex = 16;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.bnPegawai.Location = new System.Drawing.Point(0, 83);
+            this.bnPegawai.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.bnPegawai.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.bnPegawai.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.bnPegawai.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.bnPegawai.Name = "bnPegawai";
+            this.bnPegawai.PositionItem = this.bindingNavigatorPositionItem;
+            this.bnPegawai.Size = new System.Drawing.Size(800, 27);
+            this.bnPegawai.TabIndex = 16;
+            this.bnPegawai.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -351,7 +351,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.bindingNavigator1);
+            this.Controls.Add(this.bnPegawai);
             this.Controls.Add(this.cmbJK);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -372,9 +372,9 @@
             this.Text = "Pegawai";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bnPegawai)).EndInit();
+            this.bnPegawai.ResumeLayout(false);
+            this.bnPegawai.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -399,7 +399,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbJK;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.BindingNavigator bnPegawai;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
