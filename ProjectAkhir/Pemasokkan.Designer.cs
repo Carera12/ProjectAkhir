@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cbObat = new System.Windows.Forms.Label();
+            this.labelObat = new System.Windows.Forms.Label();
             this.cbIDSupplier = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,14 +57,14 @@
             this.dataGridView1.Size = new System.Drawing.Size(580, 209);
             this.dataGridView1.TabIndex = 0;
             // 
-            // cbObat
+            // labelObat
             // 
-            this.cbObat.AutoSize = true;
-            this.cbObat.Location = new System.Drawing.Point(371, 321);
-            this.cbObat.Name = "cbObat";
-            this.cbObat.Size = new System.Drawing.Size(76, 16);
-            this.cbObat.TabIndex = 1;
-            this.cbObat.Text = "Nama Obat";
+            this.labelObat.AutoSize = true;
+            this.labelObat.Location = new System.Drawing.Point(371, 321);
+            this.labelObat.Name = "labelObat";
+            this.labelObat.Size = new System.Drawing.Size(76, 16);
+            this.labelObat.TabIndex = 1;
+            this.labelObat.Text = "Nama Obat";
             // 
             // cbIDSupplier
             // 
@@ -121,6 +121,7 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 
@@ -207,7 +208,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbIDSupplier);
-            this.Controls.Add(this.cbObat);
+            this.Controls.Add(this.labelObat);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Pemasokkan";
             this.Text = "Pemasokkan";
@@ -221,7 +222,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label cbObat;
+        private System.Windows.Forms.Label labelObat;
         private System.Windows.Forms.Label cbIDSupplier;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
