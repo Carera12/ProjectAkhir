@@ -57,7 +57,22 @@ namespace ProjectAkhir
         {
                         
         }
-        
+        private void cbSupplier()
+        {
+            koneksi.Open();
+            string str = "SELECT nama_supplier FROM Supplier";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cmbNamaSup.DisplayMember = "nama_supplier";
+            cmbNamaSup.ValueMember = "ID_supplier";
+            cmbNamaSup.DataSource = ds.Tables[0];
+        }
+
+
 
         private void label2_Click(object sender, EventArgs e)
         {
