@@ -125,5 +125,10 @@ namespace ProjectAkhir
         {
 
         }
+
+        private void Supplier_Load()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

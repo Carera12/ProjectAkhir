@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.cbObat = new System.Windows.Forms.Label();
+            this.cbIDSupplier = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,9 +41,9 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.txtJumPema = new System.Windows.Forms.TextBox();
             this.txtIDPema = new System.Windows.Forms.TextBox();
-            this.cmbIDObat = new System.Windows.Forms.ComboBox();
-            this.cmbIDSup = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmbNamaObat = new System.Windows.Forms.ComboBox();
+            this.cmbNamaSup = new System.Windows.Forms.ComboBox();
+            this.dtTP = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,23 +57,24 @@
             this.dataGridView1.Size = new System.Drawing.Size(580, 209);
             this.dataGridView1.TabIndex = 0;
             // 
-            // label1
+            // cbObat
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(374, 326);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ID Obat";
+            this.cbObat.AutoSize = true;
+            this.cbObat.Location = new System.Drawing.Point(371, 321);
+            this.cbObat.Name = "cbObat";
+            this.cbObat.Size = new System.Drawing.Size(76, 16);
+            this.cbObat.TabIndex = 1;
+            this.cbObat.Text = "Nama Obat";
             // 
-            // label2
+            // cbIDSupplier
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(374, 275);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "ID Supplier";
+            this.cbIDSupplier.AutoSize = true;
+            this.cbIDSupplier.Location = new System.Drawing.Point(371, 275);
+            this.cbIDSupplier.Name = "cbIDSupplier";
+            this.cbIDSupplier.Size = new System.Drawing.Size(97, 16);
+            this.cbIDSupplier.TabIndex = 2;
+            this.cbIDSupplier.Text = "Nama Supplier";
+            this.cbIDSupplier.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -129,6 +130,7 @@
             this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -163,37 +165,37 @@
             this.txtIDPema.Size = new System.Drawing.Size(135, 22);
             this.txtIDPema.TabIndex = 13;
             // 
-            // cmbIDObat
+            // cmbNamaObat
             // 
-            this.cmbIDObat.FormattingEnabled = true;
-            this.cmbIDObat.Location = new System.Drawing.Point(474, 318);
-            this.cmbIDObat.Name = "cmbIDObat";
-            this.cmbIDObat.Size = new System.Drawing.Size(142, 24);
-            this.cmbIDObat.TabIndex = 14;
+            this.cmbNamaObat.FormattingEnabled = true;
+            this.cmbNamaObat.Location = new System.Drawing.Point(474, 318);
+            this.cmbNamaObat.Name = "cmbNamaObat";
+            this.cmbNamaObat.Size = new System.Drawing.Size(142, 24);
+            this.cmbNamaObat.TabIndex = 14;
             // 
-            // cmbIDSup
+            // cmbNamaSup
             // 
-            this.cmbIDSup.FormattingEnabled = true;
-            this.cmbIDSup.Location = new System.Drawing.Point(474, 272);
-            this.cmbIDSup.Name = "cmbIDSup";
-            this.cmbIDSup.Size = new System.Drawing.Size(142, 24);
-            this.cmbIDSup.TabIndex = 15;
+            this.cmbNamaSup.FormattingEnabled = true;
+            this.cmbNamaSup.Location = new System.Drawing.Point(474, 272);
+            this.cmbNamaSup.Name = "cmbNamaSup";
+            this.cmbNamaSup.Size = new System.Drawing.Size(142, 24);
+            this.cmbNamaSup.TabIndex = 15;
             // 
-            // dateTimePicker1
+            // dtTP
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(356, 368);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dtTP.Location = new System.Drawing.Point(356, 368);
+            this.dtTP.Name = "dtTP";
+            this.dtTP.Size = new System.Drawing.Size(200, 22);
+            this.dtTP.TabIndex = 16;
             // 
             // Pemasokkan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.cmbIDSup);
-            this.Controls.Add(this.cmbIDObat);
+            this.Controls.Add(this.dtTP);
+            this.Controls.Add(this.cmbNamaSup);
+            this.Controls.Add(this.cmbNamaObat);
             this.Controls.Add(this.txtIDPema);
             this.Controls.Add(this.txtJumPema);
             this.Controls.Add(this.btnClose);
@@ -204,8 +206,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbIDSupplier);
+            this.Controls.Add(this.cbObat);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Pemasokkan";
             this.Text = "Pemasokkan";
@@ -219,8 +221,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label cbObat;
+        private System.Windows.Forms.Label cbIDSupplier;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -231,8 +233,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.TextBox txtJumPema;
         private System.Windows.Forms.TextBox txtIDPema;
-        private System.Windows.Forms.ComboBox cmbIDObat;
-        private System.Windows.Forms.ComboBox cmbIDSup;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox cmbNamaObat;
+        private System.Windows.Forms.ComboBox cmbNamaSup;
+        private System.Windows.Forms.DateTimePicker dtTP;
     }
 }
