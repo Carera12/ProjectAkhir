@@ -8,14 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Net.WebRequestMethods;
 
 namespace ProjectAkhir
 {
     public partial class Obat : Form
     {
-        private string stringConnection = "data source = MSI\\DAVITPH;" +
-        "database=UAS_12B;User ID = sa; Password = DavitPH21";
+        private string stringConnection = "Data Source=RARAIMUT\\CANDRARAKU;Initial Catalog=UAS_12B;Persist Security Info=True;User ID=sa;Password=Rera1234";
         private SqlConnection koneksi;
+        private string id, nm, jns, hrg, idpgw, idgdg;
 
         public Obat()
         {
@@ -110,7 +111,37 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            id = txtID.Text;
+            nm = txtNama.Text;
+            jns = cmbJenis.Text;
+            hrg = txtHarga.Text;
+            idgdg = cbxIDG.SelectedValue.ToString();
+            idpgw = cbxIDPG.SelectedValue.ToString();
 
+            koneksi.Open();
+            string strs = "select ID_Gudang from dbo.Gudang where ID_Gudang = @idg, " +
+                "select ID_Pegawai from dbo.Pegawai where ID_Pegawai = @idp";
+            SqlCommand cm = new SqlCommand(strs, koneksi);
+            cm.CommandType = CommandType.Text;
+            cm.Parameters.Add(new SqlParameter("@idg", idgdg));
+            cm.Parameters.Add(new SqlParameter("@idp", idpgw));
+
+            string str = "insert into dbo.Obat(ID_Obat, nama_obat, jenis_obat, harga_obat, ID_Pegawai, ID_Gudang)" +
+                    "values (@idO, @nmO, @jnsO, @hrgO, @IDP, @IDG)";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            cmd.CommandType = CommandType.Text;
+            cmd.Parameters.AddWithValue("@idO", id);
+            cmd.Parameters.AddWithValue("@nmO", nm);
+            cmd.Parameters.AddWithValue("@jnsO", jns);
+            cmd.Parameters.AddWithValue("@hrgO", hrg);
+            cmd.Parameters.AddWithValue("@IDP", idpgw);
+            cmd.Parameters.AddWithValue("@IDG", idgdg);
+            cmd.ExecuteNonQuery();
+
+            koneksi.Close();
+            MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            refreshform();
         }
 
         private void txtNama_TextChanged(object sender, EventArgs e)
