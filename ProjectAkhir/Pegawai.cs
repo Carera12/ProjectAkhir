@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,12 @@ namespace ProjectAkhir
 {
     public partial class Pegawai : Form
     {
+        private string stringConnection = "Data Source=RARAIMUT\\CANDRARAKU;Initial Catalog=Aktivity6PABD;Persist Security Info=True;User ID=sa;Password=Rera1234";
+        private SqlConnection koneksi;
+        private string nim, nama, alamat, jk, prodi;
+        private DateTime tgl;
+        BindingSource customersBindingSource = new BindingSource();
+
         public Pegawai()
         {
             InitializeComponent();
@@ -53,6 +60,27 @@ namespace ProjectAkhir
             this.txtAlmt.DataBindings.Clear();
             this.cmbJK.DataBindings.Clear();
             this.txtNoTlp.DataBindings.Clear();
+        }
+
+        private void FormDataPegawai_Load()
+        {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_Pegawai, nama_pegawai, JK, Alamat, no_telepon FROM Pegawai", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customersBindingSource.DataSource = ds.Tables[0];
+            this.txtIDPeg.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "ID_Pegawai", true));
+            this.txtNamaPeg.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "nama_pegawai", true));
+            this.txtAlmt.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "Alamat", true));
+            this.cmbJK.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "JK", true));
+            this.txtNoTlp.DataBindings.Add(
+                 new Binding("Text", this.customersBindingSource, "no_telepon", true));
+            koneksi.Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
