@@ -64,6 +64,22 @@ namespace ProjectAkhir
             FormDataPegawai_Load();
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            txtIDSup.Text = "";
+            txtNamaSup.Text = "";
+            txtAlmt.Text = "";
+            txtNoTlp.Text = "";
+            txtIDSup.Enabled = true;
+            txtNamaSup.Enabled = true;
+            txtAlmt.Enabled = true;
+            txtAlmt.Enabled = true;
+            txtNoTlp.Enabled = true;
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+            btnAdd.Enabled = false;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 
