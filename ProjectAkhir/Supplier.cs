@@ -22,6 +22,14 @@ namespace ProjectAkhir
             InitializeComponent();
         }
 
+        private void clearBinding()
+        {
+            this.txtIDSup.DataBindings.Clear();
+            this.txtNamaSup.DataBindings.Clear();
+            this.txtAlmt.DataBindings.Clear();
+            this.txtNoTlp.DataBindings.Clear();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 
