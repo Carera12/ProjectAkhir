@@ -64,7 +64,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(227, 265);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.Size = new System.Drawing.Size(94, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "No Telephone";
             // 
@@ -73,7 +73,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(227, 213);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 17);
+            this.label2.Size = new System.Drawing.Size(49, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Alamat";
             // 
@@ -82,7 +82,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(227, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 17);
+            this.label3.Size = new System.Drawing.Size(97, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Nama Supplier";
             // 
@@ -91,7 +91,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(227, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 17);
+            this.label4.Size = new System.Drawing.Size(73, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "ID Supplier";
             // 
@@ -101,7 +101,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(299, 43);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(201, 32);
+            this.label5.Size = new System.Drawing.Size(200, 32);
             this.label5.TabIndex = 4;
             this.label5.Text = "Data Supplier";
             // 
@@ -307,6 +307,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Supplier";
             this.Text = "Supplier";
+            this.Load += new System.EventHandler(this.Supplier_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
