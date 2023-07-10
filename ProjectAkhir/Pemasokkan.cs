@@ -20,6 +20,20 @@ namespace ProjectAkhir
             InitializeComponent();
         }
 
+        private void refreshform()
+        {
+            cbxNama.Enabled = false;
+            cbxStatusMahasiswa.Enabled = false;
+            cbxTahunMasuk.Enabled = false;
+            cbxNama.SelectedIndex = -1;
+            cbxStatusMahasiswa.SelectedIndex = -1;
+            cbxTahunMasuk.SelectedIndex = -1;
+            txtNIM.Visible = false;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+            btnAdd.Enabled = true;
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
