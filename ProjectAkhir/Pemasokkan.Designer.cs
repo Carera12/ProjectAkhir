@@ -62,7 +62,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(374, 326);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "ID Obat";
             // 
@@ -71,7 +71,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(374, 275);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 17);
+            this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID Supplier";
             // 
@@ -80,7 +80,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(166, 368);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(145, 17);
+            this.label3.Size = new System.Drawing.Size(141, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tanggal Pemasokkan";
             // 
@@ -89,7 +89,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(33, 321);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 17);
+            this.label4.Size = new System.Drawing.Size(133, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Jumlah Pemasokkan";
             // 
@@ -98,7 +98,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(33, 275);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 17);
+            this.label5.Size = new System.Drawing.Size(103, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "ID Pemasokkan";
             // 
@@ -209,6 +209,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Pemasokkan";
             this.Text = "Pemasokkan";
+            this.Load += new System.EventHandler(this.Pemasokkan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

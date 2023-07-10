@@ -80,6 +80,11 @@ namespace ProjectAkhir
             btnAdd.Enabled = false;
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            refreshform();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             id = txtIDSup.Text.Trim();
