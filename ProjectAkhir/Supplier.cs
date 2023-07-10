@@ -32,7 +32,7 @@ namespace ProjectAkhir
             this.txtAlmt.DataBindings.Clear();
             this.txtNoTlp.DataBindings.Clear();
         }
-        private void FormDataPegawai_Load()
+        private void FormDataSupplier_Load()
         {
             koneksi.Open();
             SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_supplier, nama_supplier, Alamat_supplier, No_Telepon FROM Supplier", koneksi));
@@ -61,7 +61,7 @@ namespace ProjectAkhir
             btnSave.Enabled = false;
             btnClear.Enabled = false;
             clearBinding();
-            FormDataPegawai_Load();
+            FormDataSupplier_Load();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

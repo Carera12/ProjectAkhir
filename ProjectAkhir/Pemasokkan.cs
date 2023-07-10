@@ -27,6 +27,7 @@ namespace ProjectAkhir
             Form1 mu = new Form1();
             mu.ShowDialog();
         }
+        
 
         private void Pemasokkan_Load(object sender, EventArgs e)
         {
