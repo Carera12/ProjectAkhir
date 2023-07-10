@@ -41,8 +41,8 @@ namespace ProjectAkhir
         private void dataPegawaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Pegawai pg = new Pegawai();
-            pg.ShowDialog();
-            this.Close();
+            pg.Show();
+            this.Hide();
         }
 
         private void dataObatToolStripMenuItem_Click(object sender, EventArgs e)

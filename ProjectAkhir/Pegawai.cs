@@ -13,7 +13,7 @@ namespace ProjectAkhir
 {
     public partial class Pegawai : Form
     {
-        private string stringConnection = "Data Source=RARAIMUT\\CANDRARAKU;Initial Catalog=Aktivity6PABD;Persist Security Info=True;User ID=sa;Password=Rera1234";
+        private string stringConnection = "Data Source=RARAIMUT\\CANDRARAKU;Initial Catalog=UAS_12B;Persist Security Info=True;User ID=sa;Password=Rera1234";
         private SqlConnection koneksi;
         private string id, nama, alamat, jk, notlp;
         BindingSource customersBindingSource = new BindingSource();
@@ -28,10 +28,9 @@ namespace ProjectAkhir
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            Form1 fm = new Form1();
+            fm.Show();
             this.Hide();
-            this.Close();
-            Form1 mu = new Form1();
-            mu.ShowDialog();
         }
         private void refreshform()
         {
@@ -55,6 +54,35 @@ namespace ProjectAkhir
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            refreshform();
+        }
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            id = txtIDPeg.Text.Trim();
+            nama = txtNamaPeg.Text.Trim();
+            alamat = txtAlmt.Text.Trim();
+            jk = cmbJK.SelectedItem.ToString();
+            notlp = txtNoTlp.Text.Trim();
+
+            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(alamat) || string.IsNullOrEmpty(jk) || string.IsNullOrEmpty(notlp))
+            {
+                MessageBox.Show("Please fill in all identity fields!");
+            }
+            else
+            {
+                koneksi.Open();
+                string query = "INSERT INTO Pegawai (ID_Pegawai, nama_pegawai, Alamat, JK, no_telepon) VALUES (@ID_Pegawai, @nama_pegawai, @Alamat, @JK, @no_telepon)";
+                SqlCommand command = new SqlCommand(query, koneksi);
+                command.Parameters.AddWithValue("@ID_Pegawai", id);
+                command.Parameters.AddWithValue("@nama_pegawai", nama);
+                command.Parameters.AddWithValue("@Alamat", alamat);
+                command.Parameters.AddWithValue("@JK", jk);
+                command.Parameters.AddWithValue("@no_telepon", notlp);
+                command.ExecuteNonQuery();
+                koneksi.Close();
+
+                MessageBox.Show("Data has been saved to the database.");
+            }
             refreshform();
         }
 
@@ -104,34 +132,6 @@ namespace ProjectAkhir
             koneksi.Close();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            id = txtIDPeg.Text.Trim();
-            nama = txtNamaPeg.Text.Trim();
-            alamat = txtAlmt.Text.Trim();
-            jk = cmbJK.SelectedItem.ToString();
-            notlp = txtNoTlp.Text.Trim();
-
-            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(alamat) || string.IsNullOrEmpty(jk) || string.IsNullOrEmpty(notlp))
-            {
-                MessageBox.Show("Please fill in all identity fields!");
-            }
-            else
-            {
-                koneksi.Open();
-                string query = "INSERT INTO Pegawai (ID_Pegawai, nama_pegawai, Alamat, JK, no_telepon) VALUES (@ID_Pegawai, @nama_pegawai, @Alamat, @JK, @no_telepon)";
-                SqlCommand command = new SqlCommand(query, koneksi);
-                command.Parameters.AddWithValue("@ID_Pegawai", id);
-                command.Parameters.AddWithValue("@nama_pegawai", nama);
-                command.Parameters.AddWithValue("@Alamat", alamat);
-                command.Parameters.AddWithValue("@JK", jk);
-                command.Parameters.AddWithValue("@no_telepon", notlp);
-                command.ExecuteNonQuery();
-                koneksi.Close();
-
-                MessageBox.Show("Data has been saved to the database.");
-            }
-            refreshform();
-        }
+        
     }
 }
