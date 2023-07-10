@@ -121,7 +121,7 @@ namespace ProjectAkhir
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(31, 296);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 17);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 6;
             this.label2.Text = "Jumlah";
             // 
@@ -133,7 +133,7 @@ namespace ProjectAkhir
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(31, 340);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 17);
+            this.label3.Size = new System.Drawing.Size(114, 16);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tanggal Masuk";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -174,7 +174,7 @@ namespace ProjectAkhir
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(26, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(195, 32);
+            this.label4.Size = new System.Drawing.Size(194, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Data Gudang";
             // 
@@ -196,7 +196,7 @@ namespace ProjectAkhir
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(31, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
+            this.label1.Size = new System.Drawing.Size(80, 16);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID Gudang";
             // 

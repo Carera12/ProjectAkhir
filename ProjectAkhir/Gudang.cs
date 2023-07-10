@@ -14,9 +14,13 @@ namespace ProjectAkhir
     public partial class Gudang : Form
     {
 
-        private string stringConnection = "data source = MSI\\DAVITPH;" +
-        "database=UAS_12B;User ID = sa; Password = DavitPH21";
+        private string stringConnection = "Data Source=RARAIMUT\\CANDRARAKU;Initial Catalog=UAS_12B;Persist Security Info=True;User ID=sa;Password=Rera1234";
         private SqlConnection koneksi;
+        private string id, jml;
+        private DateTime tgl;
+        BindingSource customersBindingSource = new BindingSource();
+
+
 
         private void refreshform()
         {
@@ -31,6 +35,24 @@ namespace ProjectAkhir
 
             btnSave.Enabled = false;
             btnClear.Enabled = false;
+
+            FormDataMahasiswa_Load();
+        }
+        private void FormDataMahasiswa_Load()
+        {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_Gudang, Jumlah, tgl_masuk FROM Gudang", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customersBindingSource.DataSource = ds.Tables[0];
+            this.txtIDG.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "ID_Gudang", true));
+            this.txtJumlah.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "Jumlah", true));
+            this.txtTanggal.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "tgl_masuk", true));
+            koneksi.Close();
         }
 
         private void dataGridView()
@@ -48,7 +70,7 @@ namespace ProjectAkhir
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            refreshform();
+            
         }
 
         private void Gudang_Load(object sender, EventArgs e)
@@ -72,11 +94,17 @@ namespace ProjectAkhir
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            txtIDG.Text = "";
+            txtJumlah.Text = "";
             txtIDG.Enabled = true;
             txtJumlah.Enabled = true;
+
+            txtTanggal.Value = DateTime.Today;
             txtTanggal.Enabled = true;
+
             btnSave.Enabled = true;
             btnClear.Enabled = true;
+            btnAdd.Enabled = false;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -86,40 +114,31 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            string IDGudang = txtIDG.Text;
-            string Jumlah = txtJumlah.Text;
-            DateTime Tanggal = txtTanggal.Value;
+            id = txtIDG.Text.Trim();
+            jml = txtJumlah.Text.Trim();
+            tgl = txtTanggal.Value;
 
-
-            if (IDGudang == "")
+            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(id) || string.IsNullOrEmpty(jml))
             {
-                MessageBox.Show("Masukkan ID Gudang", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (Jumlah == "")
-            {
-                MessageBox.Show("Masukkan Jumlah ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else if (Tanggal == DateTime.MinValue)
-            {
-                MessageBox.Show("Masukkan Tanggal", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill in all identity fields!");
             }
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.Gudang (ID_Gudang, Jumlah, tgl_masuk)" + "values(@ID_Gudang, @Jumlah, @tgl_masuk)";
-                SqlCommand cmd = new SqlCommand(str, koneksi);
-                cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("ID_Gudang", IDGudang));
-                cmd.Parameters.Add(new SqlParameter("Jumlah",Jumlah));
-                cmd.Parameters.Add(new SqlParameter("tgl_masuk", Tanggal));
-                cmd.ExecuteNonQuery();
-
+                string query = "INSERT INTO Gudang (ID_Gudang, Jumlah, tgl_masuk) VALUES (@ID_Gudang, @Jumlah, @tgl_masuk)";
+                SqlCommand command = new SqlCommand(query, koneksi);
+                command.Parameters.AddWithValue("@ID_Gudang", id);
+                command.Parameters.AddWithValue("@Jumlah", jml);
+                command.Parameters.AddWithValue("@tgl_masuk", tgl);
+                command.ExecuteNonQuery();
                 koneksi.Close();
-                MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridView();
-                refreshform();
+
+                MessageBox.Show("Data has been saved to the database.");
             }
+            dataGridView();
+            refreshform();
         }
+        
 
         private void txtID_TextChanged(object sender, EventArgs e)
         {
