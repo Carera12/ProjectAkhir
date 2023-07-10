@@ -46,5 +46,18 @@ namespace ProjectAkhir
             btnClear.Enabled = true;
             btnAdd.Enabled = false;
         }
+        private void clearBinding()
+        {
+            this.txtIDPeg.DataBindings.Clear();
+            this.txtNamaPeg.DataBindings.Clear();
+            this.txtAlmt.DataBindings.Clear();
+            this.cmbJK.DataBindings.Clear();
+            this.txtNoTlp.DataBindings.Clear();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
