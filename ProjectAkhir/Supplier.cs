@@ -20,6 +20,9 @@ namespace ProjectAkhir
         public Supplier()
         {
             InitializeComponent();
+            koneksi = new SqlConnection(stringConnection);
+            this.bnSupplier.BindingSource = this.customersBindingSource;
+            refreshform();
         }
 
         private void clearBinding()
