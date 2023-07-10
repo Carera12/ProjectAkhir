@@ -82,7 +82,30 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            id = txtIDSup.Text.Trim();
+            nama = txtNamaSup.Text.Trim();
+            alamat = txtAlmt.Text.Trim();
+            notlp = txtNoTlp.Text.Trim();
 
+            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(alamat) || string.IsNullOrEmpty(notlp))
+            {
+                MessageBox.Show("Please fill in all identity fields!");
+            }
+            else
+            {
+                koneksi.Open();
+                string query = "INSERT INTO Supplier (ID_supplier, nama_supplier, Alamat_supplier, No_Telepon) VALUES (@ID_supplier, @nama_supplier, @Alamat_supplier, @No_Telepon)";
+                SqlCommand command = new SqlCommand(query, koneksi);
+                command.Parameters.AddWithValue("@ID_supplier", id);
+                command.Parameters.AddWithValue("@nama_supplier", nama);
+                command.Parameters.AddWithValue("@Alamat_supplier", alamat);
+                command.Parameters.AddWithValue("@No_Telepon", notlp);
+                command.ExecuteNonQuery();
+                koneksi.Close();
+
+                MessageBox.Show("Data has been saved to the database.");
+            }
+            refreshform();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
