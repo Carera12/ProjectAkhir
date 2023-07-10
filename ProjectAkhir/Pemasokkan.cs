@@ -55,7 +55,21 @@ namespace ProjectAkhir
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-                        
+            txtIDPema.Text = "";
+            txtJumPema.Text = "";
+            dtTP.Value = DateTime.Today;
+            txtIDPema.Enabled = true;
+            txtJumPema.Enabled = true;
+
+            cmbNamaObat.Enabled = true;
+            cmbNamaSup.Enabled = true;
+
+            dtTP.Enabled = true;
+            cbSupplier();
+            cbObat();
+            btnSave.Enabled = true;
+            btnClear.Enabled = true;
+            btnAdd.Enabled = false;
         }
         private void cbSupplier()
         {
@@ -71,6 +85,21 @@ namespace ProjectAkhir
             cmbNamaSup.ValueMember = "ID_supplier";
             cmbNamaSup.DataSource = ds.Tables[0];
         }
+        private void cbObat()
+        {
+            koneksi.Open();
+            string str = "SELECT nama_obat FROM Obat";
+            SqlCommand cmd = new SqlCommand(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            cmd.ExecuteReader();
+            koneksi.Close();
+            cmbNamaSup.DisplayMember = "nama_obat";
+            cmbNamaSup.ValueMember = "ID_Obat";
+            cmbNamaSup.DataSource = ds.Tables[0];
+        }
+
 
 
 
