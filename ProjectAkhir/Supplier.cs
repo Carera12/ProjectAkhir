@@ -48,6 +48,19 @@ namespace ProjectAkhir
             koneksi.Close();
         }
 
+        private void refreshform()
+        {
+            txtIDSup.Enabled = false;
+            txtNamaSup.Enabled = false;
+            txtAlmt.Enabled = false;
+            txtNoTlp.Enabled = false;
+            btnAdd.Enabled = true;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+            clearBinding();
+            FormDataPegawai_Load();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
 
