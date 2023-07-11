@@ -51,7 +51,7 @@ namespace ProjectAkhir
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SpringGreen;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.DeepPink;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(31, 108);
             this.dataGridView1.Name = "dataGridView1";
@@ -63,7 +63,7 @@ namespace ProjectAkhir
             // 
             // btnOpen
             // 
-            this.btnOpen.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnOpen.BackColor = System.Drawing.Color.DeepPink;
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
             this.btnOpen.Location = new System.Drawing.Point(648, 108);
@@ -76,7 +76,7 @@ namespace ProjectAkhir
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnAdd.BackColor = System.Drawing.Color.DeepPink;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(426, 246);
@@ -89,7 +89,7 @@ namespace ProjectAkhir
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnClear.BackColor = System.Drawing.Color.DeepPink;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(426, 287);
@@ -102,7 +102,7 @@ namespace ProjectAkhir
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnSave.BackColor = System.Drawing.Color.DeepPink;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(426, 330);
@@ -121,7 +121,7 @@ namespace ProjectAkhir
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(31, 296);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 16);
+            this.label2.Size = new System.Drawing.Size(59, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "Jumlah";
             // 
@@ -133,7 +133,7 @@ namespace ProjectAkhir
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(31, 340);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 16);
+            this.label3.Size = new System.Drawing.Size(118, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tanggal Masuk";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -156,7 +156,7 @@ namespace ProjectAkhir
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnClose.BackColor = System.Drawing.Color.DeepPink;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(31, 397);
@@ -174,13 +174,13 @@ namespace ProjectAkhir
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(26, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 32);
+            this.label4.Size = new System.Drawing.Size(195, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "Data Gudang";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel1.BackColor = System.Drawing.Color.DeepPink;
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
@@ -196,7 +196,7 @@ namespace ProjectAkhir
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(31, 255);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 16);
+            this.label1.Size = new System.Drawing.Size(85, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "ID Gudang";
             // 
@@ -210,10 +210,10 @@ namespace ProjectAkhir
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProjectAkhir.Properties.Resources.Cemara;
-            this.pictureBox1.Location = new System.Drawing.Point(-112, -39);
+            this.pictureBox1.Image = global::ProjectAkhir.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(-158, -38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1007, 605);
+            this.pictureBox1.Size = new System.Drawing.Size(1114, 589);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
@@ -223,7 +223,7 @@ namespace ProjectAkhir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtIDG);
             this.Controls.Add(this.panel1);
