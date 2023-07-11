@@ -67,42 +67,54 @@
             // 
             // btnClose
             // 
+            this.btnClose.BackColor = System.Drawing.Color.DeepPink;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(26, 402);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(65, 36);
             this.btnClose.TabIndex = 0;
             this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.Color.DeepPink;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(568, 299);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(83, 59);
             this.btnClear.TabIndex = 1;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.DeepPink;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(568, 219);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(83, 59);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.Color.DeepPink;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(568, 129);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(85, 59);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // txtNoTlp
@@ -183,7 +195,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(20, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(222, 32);
+            this.label5.Size = new System.Drawing.Size(223, 32);
             this.label5.TabIndex = 12;
             this.label5.Text = "Daftar Pegawai";
             // 
@@ -211,7 +223,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.ForestGreen;
+            this.panel1.BackColor = System.Drawing.Color.DeepPink;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -245,7 +257,7 @@
             this.bnPegawai.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bnPegawai.Name = "bnPegawai";
             this.bnPegawai.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnPegawai.Size = new System.Drawing.Size(800, 27);
+            this.bnPegawai.Size = new System.Drawing.Size(800, 31);
             this.bnPegawai.TabIndex = 16;
             this.bnPegawai.Text = "bindingNavigator1";
             // 
@@ -255,13 +267,13 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -271,7 +283,7 @@
             this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
@@ -280,7 +292,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveFirstItem.Text = "Move first";
             // 
             // bindingNavigatorMovePreviousItem
@@ -289,19 +301,18 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -310,7 +321,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -318,7 +329,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
             // bindingNavigatorMoveLastItem
@@ -327,18 +338,18 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ProjectAkhir.Properties.Resources.Cemara;
-            this.pictureBox1.Location = new System.Drawing.Point(-143, -58);
+            this.pictureBox1.Image = global::ProjectAkhir.Properties.Resources.Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(-166, -69);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1110, 621);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -350,6 +361,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bnPegawai);
             this.Controls.Add(this.cmbJK);
