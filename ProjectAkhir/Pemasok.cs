@@ -74,10 +74,10 @@ namespace ProjectAkhir
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            gridView();
+            datagridView();
             klikOpen.Enabled = false;
         }
-        private void gridView()
+        private void datagridView()
         {
             koneksi.Open();
             string str = "select ID_Pemasokan, Jumlah_Pemasokan, tgl_Pemasokan, ID_supplier, ID_Obat from dbo.Pemasokan";
@@ -109,21 +109,22 @@ namespace ProjectAkhir
             cm.Parameters.Add(new SqlParameter("@ID_supplier", sup));
             cm.Parameters.Add(new SqlParameter("@ID_Obat", obt));
 
-            string str = "insert into dbo.Pemasokan(ID_Pemasokan, Jumlah_Pemasokan, tgl_Pemasokan, ID_supplier, ID_Obat" +
+            string stg = "insert into dbo.Pemasokan(ID_Pemasokan, Jumlah_Pemasokan, tgl_Pemasokan, ID_supplier, ID_Obat" +
                 "values (@ID_Pemasokan, @Jumlah_Pemasokan, @tgl_Pemasokan, @ID_supplier, @ID_Obat)";
-            SqlCommand cmn = new SqlCommand(str, koneksi);
+            SqlCommand cmn = new SqlCommand(stg, koneksi);
             cmn.CommandType= CommandType.Text;
             cmn.Parameters.AddWithValue("@ID_Pemasokan", id);
             cmn.Parameters.AddWithValue("@Jumlah_Pemasokan", jml);
             cmn.Parameters.AddWithValue("@tgl_Pemasokan", tgl);
             cmn.Parameters.AddWithValue("@ID_supplier", sup);
             cmn.Parameters.AddWithValue("@ID_Obat", obt);
-            
+            cmn.ExecuteNonQuery();
 
             koneksi.Close();
             MessageBox.Show("Data Berhasil Disimpan", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            gridView();
+            datagridView();
             refreshform();
+            
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -134,10 +135,16 @@ namespace ProjectAkhir
             mu.ShowDialog();
         }
 
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         public Pemasok()
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
+            refreshform();
         }
 
         private void Pemasok_Load(object sender, EventArgs e)
