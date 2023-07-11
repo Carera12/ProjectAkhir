@@ -29,6 +29,7 @@ namespace ProjectAkhir
         {
             txtid.Text = "";
             txtid.Enabled = true;
+
             txtJml.Text = "";
             txtJml.Enabled = true;
 
@@ -81,9 +82,9 @@ namespace ProjectAkhir
         {
             koneksi.Open();
             string str = "select ID_Pemasokan, Jumlah_Pemasokan, tgl_Pemasokan, ID_supplier, ID_Obat from dbo.Pemasokan";
-            SqlDataAdapter sa = new SqlDataAdapter(str, koneksi);
+            SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
-            sa.Fill(ds);
+            da.Fill(ds);
             dataGridView1.DataSource = ds.Tables[0];
             koneksi.Close();
         }
@@ -102,15 +103,15 @@ namespace ProjectAkhir
             obt = cmbObt.Text;
 
             koneksi.Open();
-            string strs = "select ID_supplier from dbo.Supplier where ID_supplier = @ID_supplier, " +
-                "select ID_Obat from dbo.Obat where ID_Obat = @ID_Obat";
+            string strs = "SELECT ID_supplier FROM dbo.Supplier WHERE ID_supplier = @ID_supplier; " +
+             "SELECT ID_Obat FROM dbo.Obat WHERE ID_Obat = @ID_Obat";
             SqlCommand cm = new SqlCommand(strs, koneksi);
             cm.CommandType= CommandType.Text;
             cm.Parameters.Add(new SqlParameter("@ID_supplier", sup));
             cm.Parameters.Add(new SqlParameter("@ID_Obat", obt));
 
-            string stg = "insert into dbo.Pemasokan(ID_Pemasokan, Jumlah_Pemasokan, tgl_Pemasokan, ID_supplier, ID_Obat" +
-                "values (@ID_Pemasokan, @Jumlah_Pemasokan, @tgl_Pemasokan, @ID_supplier, @ID_Obat)";
+            string stg = "INSERT INTO dbo.Pemasokan(ID_Pemasokan, Jumlah_Pemasokan, tgl_Pemasokan, ID_supplier, ID_Obat) " +
+             "VALUES (@ID_Pemasokan, @Jumlah_Pemasokan, @tgl_Pemasokan, @ID_supplier, @ID_Obat)";
             SqlCommand cmn = new SqlCommand(stg, koneksi);
             cmn.CommandType= CommandType.Text;
             cmn.Parameters.AddWithValue("@ID_Pemasokan", id);
@@ -144,7 +145,6 @@ namespace ProjectAkhir
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            refreshform();
         }
 
         private void Pemasok_Load(object sender, EventArgs e)
@@ -172,6 +172,7 @@ namespace ProjectAkhir
         {
             txtid.Text = "";
             txtid.Enabled = false;
+
             txtJml.Text = "";
             txtJml.Enabled = false;
 
