@@ -45,6 +45,8 @@ namespace ProjectAkhir
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnOpen = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +85,7 @@ namespace ProjectAkhir
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(114, 212);
+            this.label2.Location = new System.Drawing.Point(112, 224);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 25);
             this.label2.TabIndex = 4;
@@ -93,7 +95,7 @@ namespace ProjectAkhir
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(114, 260);
+            this.label3.Location = new System.Drawing.Point(112, 272);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 25);
             this.label3.TabIndex = 5;
@@ -103,7 +105,7 @@ namespace ProjectAkhir
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(114, 306);
+            this.label4.Location = new System.Drawing.Point(112, 318);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 25);
             this.label4.TabIndex = 6;
@@ -113,7 +115,7 @@ namespace ProjectAkhir
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(114, 349);
+            this.label5.Location = new System.Drawing.Point(112, 361);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(147, 25);
             this.label5.TabIndex = 7;
@@ -122,7 +124,7 @@ namespace ProjectAkhir
             // txtAlamat
             // 
             this.txtAlamat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAlamat.Location = new System.Drawing.Point(295, 303);
+            this.txtAlamat.Location = new System.Drawing.Point(293, 315);
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(252, 30);
             this.txtAlamat.TabIndex = 10;
@@ -131,7 +133,7 @@ namespace ProjectAkhir
             // txtNomer
             // 
             this.txtNomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomer.Location = new System.Drawing.Point(295, 345);
+            this.txtNomer.Location = new System.Drawing.Point(293, 357);
             this.txtNomer.Name = "txtNomer";
             this.txtNomer.Size = new System.Drawing.Size(252, 30);
             this.txtNomer.TabIndex = 11;
@@ -140,7 +142,7 @@ namespace ProjectAkhir
             // txtNama
             // 
             this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNama.Location = new System.Drawing.Point(295, 209);
+            this.txtNama.Location = new System.Drawing.Point(293, 221);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(252, 30);
             this.txtNama.TabIndex = 9;
@@ -153,7 +155,7 @@ namespace ProjectAkhir
             this.txtJK.Items.AddRange(new object[] {
             "L",
             "P"});
-            this.txtJK.Location = new System.Drawing.Point(295, 256);
+            this.txtJK.Location = new System.Drawing.Point(293, 268);
             this.txtJK.Name = "txtJK";
             this.txtJK.Size = new System.Drawing.Size(252, 33);
             this.txtJK.TabIndex = 12;
@@ -176,7 +178,7 @@ namespace ProjectAkhir
             this.labelJudul.ForeColor = System.Drawing.Color.White;
             this.labelJudul.Location = new System.Drawing.Point(20, 16);
             this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(198, 32);
+            this.labelJudul.Size = new System.Drawing.Size(197, 32);
             this.labelJudul.TabIndex = 15;
             this.labelJudul.Text = "Data Pembeli";
             // 
@@ -209,11 +211,30 @@ namespace ProjectAkhir
             this.btnOpen.UseVisualStyleBackColor = true;
             this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(114, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 16);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "ID Pembeli";
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(367, 193);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 22);
+            this.txtId.TabIndex = 20;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
+            // 
             // Pembeli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
@@ -257,5 +278,7 @@ namespace ProjectAkhir
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

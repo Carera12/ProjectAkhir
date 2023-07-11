@@ -13,8 +13,7 @@ namespace ProjectAkhir
 {
     public partial class Pembeli : Form
     {
-        private string stringConnection = "data source = MSI\\DAVITPH;" +
-                "database=UAS_12B;User ID = sa; Password = DavitPH21";
+        private string stringConnection = "Data Source=RARAIMUT\\CANDRARAKU;Initial Catalog=UAS_12B;Persist Security Info=True;User ID=sa;Password=Rera1234";
         private SqlConnection koneksi;
 
         public Pembeli()
@@ -117,6 +116,7 @@ namespace ProjectAkhir
         private void btnSave_Click(object sender, EventArgs e)
         {
             string nama_pembeli = txtNama.Text;
+            string id = txtId.Text;
             string JK = txtJK.Text;
             string alamat = txtAlamat.Text;
             string no_telepon = txtNomer.Text;
@@ -124,6 +124,10 @@ namespace ProjectAkhir
             if (nama_pembeli == "")
             {
                 MessageBox.Show("Masukkan Nama Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (id == "")
+            {
+                MessageBox.Show("Masukkan ID Pembeli", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (JK == "")
             {
@@ -174,6 +178,11 @@ namespace ProjectAkhir
         {
             dataGridView();
             btnOpen.Enabled = false;
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
