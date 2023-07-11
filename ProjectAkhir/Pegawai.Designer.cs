@@ -235,6 +235,7 @@
             // bnPegawai
             // 
             this.bnPegawai.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.bnPegawai.BackColor = System.Drawing.Color.HotPink;
             this.bnPegawai.CountItem = this.bindingNavigatorCountItem;
             this.bnPegawai.DeleteItem = this.bindingNavigatorDeleteItem;
             this.bnPegawai.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -257,7 +258,7 @@
             this.bnPegawai.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bnPegawai.Name = "bnPegawai";
             this.bnPegawai.PositionItem = this.bindingNavigatorPositionItem;
-            this.bnPegawai.Size = new System.Drawing.Size(800, 31);
+            this.bnPegawai.Size = new System.Drawing.Size(800, 27);
             this.bnPegawai.TabIndex = 16;
             this.bnPegawai.Text = "bindingNavigator1";
             // 
@@ -267,7 +268,7 @@
             this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
