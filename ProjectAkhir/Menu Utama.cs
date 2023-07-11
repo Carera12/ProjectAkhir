@@ -81,7 +81,7 @@ namespace ProjectAkhir
         private void dataPemasokanToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Pemasokkan pmn = new Pemasokkan();
+            Pemasok pmn = new Pemasok();
             pmn.Show();
             this.Hide();
         }
