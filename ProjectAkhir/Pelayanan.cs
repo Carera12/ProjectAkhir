@@ -124,6 +124,7 @@ namespace ProjectAkhir
             txtIDPL.Enabled = true;
 
             dtTP.Value = DateTime.Today;
+            dtTP.Enabled = true;
 
             cmbPgw.Enabled = true;
             cmbPemb.Enabled = true;
