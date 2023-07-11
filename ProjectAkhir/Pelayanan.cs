@@ -118,6 +118,11 @@ namespace ProjectAkhir
             btnAdd.Enabled = true;
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             txtIDPL.Text = "";     
