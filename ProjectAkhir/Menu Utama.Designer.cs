@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.DataGudang = new System.Windows.Forms.Button();
             this.DataSupplier = new System.Windows.Forms.Button();
             this.DataPemasokkan = new System.Windows.Forms.Button();
@@ -37,13 +36,15 @@
             this.DataPembelian = new System.Windows.Forms.Button();
             this.DataPembeli = new System.Windows.Forms.Button();
             this.DataPegawai = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DataGudang
             // 
             this.DataGudang.BackColor = System.Drawing.Color.LemonChiffon;
-            this.DataGudang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataGudang.BackgroundImage")));
-            this.DataGudang.Location = new System.Drawing.Point(533, 270);
+            this.DataGudang.Location = new System.Drawing.Point(229, 248);
             this.DataGudang.Name = "DataGudang";
             this.DataGudang.Size = new System.Drawing.Size(144, 72);
             this.DataGudang.TabIndex = 8;
@@ -54,8 +55,7 @@
             // DataSupplier
             // 
             this.DataSupplier.BackColor = System.Drawing.Color.LemonChiffon;
-            this.DataSupplier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataSupplier.BackgroundImage")));
-            this.DataSupplier.Location = new System.Drawing.Point(334, 315);
+            this.DataSupplier.Location = new System.Drawing.Point(55, 248);
             this.DataSupplier.Name = "DataSupplier";
             this.DataSupplier.Size = new System.Drawing.Size(144, 72);
             this.DataSupplier.TabIndex = 7;
@@ -66,8 +66,7 @@
             // DataPemasokkan
             // 
             this.DataPemasokkan.BackColor = System.Drawing.Color.LemonChiffon;
-            this.DataPemasokkan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPemasokkan.BackgroundImage")));
-            this.DataPemasokkan.Location = new System.Drawing.Point(126, 270);
+            this.DataPemasokkan.Location = new System.Drawing.Point(603, 248);
             this.DataPemasokkan.Name = "DataPemasokkan";
             this.DataPemasokkan.Size = new System.Drawing.Size(144, 72);
             this.DataPemasokkan.TabIndex = 6;
@@ -78,7 +77,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.LemonChiffon;
-            this.button5.Location = new System.Drawing.Point(330, 53);
+            this.button5.Location = new System.Drawing.Point(412, 135);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(144, 72);
             this.button5.TabIndex = 5;
@@ -89,8 +88,7 @@
             // DataPelayanan
             // 
             this.DataPelayanan.BackColor = System.Drawing.Color.LemonChiffon;
-            this.DataPelayanan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPelayanan.BackgroundImage")));
-            this.DataPelayanan.Location = new System.Drawing.Point(210, 181);
+            this.DataPelayanan.Location = new System.Drawing.Point(603, 135);
             this.DataPelayanan.Name = "DataPelayanan";
             this.DataPelayanan.Size = new System.Drawing.Size(144, 72);
             this.DataPelayanan.TabIndex = 4;
@@ -101,8 +99,7 @@
             // DataPembelian
             // 
             this.DataPembelian.BackColor = System.Drawing.Color.LemonChiffon;
-            this.DataPembelian.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPembelian.BackgroundImage")));
-            this.DataPembelian.Location = new System.Drawing.Point(422, 181);
+            this.DataPembelian.Location = new System.Drawing.Point(412, 248);
             this.DataPembelian.Name = "DataPembelian";
             this.DataPembelian.Size = new System.Drawing.Size(144, 72);
             this.DataPembelian.TabIndex = 3;
@@ -113,8 +110,7 @@
             // DataPembeli
             // 
             this.DataPembeli.BackColor = System.Drawing.Color.LemonChiffon;
-            this.DataPembeli.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPembeli.BackgroundImage")));
-            this.DataPembeli.Location = new System.Drawing.Point(122, 91);
+            this.DataPembeli.Location = new System.Drawing.Point(55, 135);
             this.DataPembeli.Name = "DataPembeli";
             this.DataPembeli.Size = new System.Drawing.Size(144, 72);
             this.DataPembeli.TabIndex = 2;
@@ -125,8 +121,7 @@
             // DataPegawai
             // 
             this.DataPegawai.BackColor = System.Drawing.Color.LemonChiffon;
-            this.DataPegawai.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPegawai.BackgroundImage")));
-            this.DataPegawai.Location = new System.Drawing.Point(529, 91);
+            this.DataPegawai.Location = new System.Drawing.Point(229, 135);
             this.DataPegawai.Name = "DataPegawai";
             this.DataPegawai.Size = new System.Drawing.Size(144, 72);
             this.DataPegawai.TabIndex = 1;
@@ -134,12 +129,33 @@
             this.DataPegawai.UseVisualStyleBackColor = false;
             this.DataPegawai.Click += new System.EventHandler(this.DataPegawai_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(1, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(797, 82);
+            this.panel1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(21, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Beranda";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.DataGudang);
             this.Controls.Add(this.DataSupplier);
             this.Controls.Add(this.DataPemasokkan);
@@ -151,6 +167,8 @@
             this.Name = "Form1";
             this.Text = "Menu Utama";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -164,6 +182,8 @@
         private System.Windows.Forms.Button DataPemasokkan;
         private System.Windows.Forms.Button DataSupplier;
         private System.Windows.Forms.Button DataGudang;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
