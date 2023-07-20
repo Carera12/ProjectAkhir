@@ -50,14 +50,16 @@ namespace ProjectAkhir
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(370, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(370, 99);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -70,7 +72,7 @@ namespace ProjectAkhir
             this.btnOpen.BackColor = System.Drawing.Color.HotPink;
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(476, 369);
+            this.btnOpen.Location = new System.Drawing.Point(476, 396);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 46);
             this.btnOpen.TabIndex = 1;
@@ -82,7 +84,7 @@ namespace ProjectAkhir
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 132);
+            this.label2.Location = new System.Drawing.Point(12, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 3;
@@ -92,7 +94,7 @@ namespace ProjectAkhir
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 170);
+            this.label3.Location = new System.Drawing.Point(12, 197);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 20);
             this.label3.TabIndex = 4;
@@ -102,7 +104,7 @@ namespace ProjectAkhir
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 205);
+            this.label4.Location = new System.Drawing.Point(12, 232);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 20);
             this.label4.TabIndex = 5;
@@ -112,7 +114,7 @@ namespace ProjectAkhir
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 247);
+            this.label5.Location = new System.Drawing.Point(14, 274);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 6;
@@ -122,7 +124,7 @@ namespace ProjectAkhir
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 287);
+            this.label6.Location = new System.Drawing.Point(12, 314);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 20);
             this.label6.TabIndex = 7;
@@ -135,7 +137,7 @@ namespace ProjectAkhir
             this.cmbJenis.Items.AddRange(new object[] {
             "Tablet",
             "Cair"});
-            this.cmbJenis.Location = new System.Drawing.Point(132, 166);
+            this.cmbJenis.Location = new System.Drawing.Point(132, 193);
             this.cmbJenis.Name = "cmbJenis";
             this.cmbJenis.Size = new System.Drawing.Size(131, 28);
             this.cmbJenis.TabIndex = 9;
@@ -144,7 +146,7 @@ namespace ProjectAkhir
             // txtNama
             // 
             this.txtNama.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNama.Location = new System.Drawing.Point(132, 129);
+            this.txtNama.Location = new System.Drawing.Point(132, 156);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(131, 27);
             this.txtNama.TabIndex = 10;
@@ -153,7 +155,7 @@ namespace ProjectAkhir
             // txtHarga
             // 
             this.txtHarga.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHarga.Location = new System.Drawing.Point(132, 205);
+            this.txtHarga.Location = new System.Drawing.Point(132, 232);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.Size = new System.Drawing.Size(131, 27);
             this.txtHarga.TabIndex = 15;
@@ -164,7 +166,7 @@ namespace ProjectAkhir
             this.btnAdd.BackColor = System.Drawing.Color.HotPink;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(284, 72);
+            this.btnAdd.Location = new System.Drawing.Point(284, 99);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(69, 48);
             this.btnAdd.TabIndex = 16;
@@ -177,7 +179,7 @@ namespace ProjectAkhir
             this.btnSave.BackColor = System.Drawing.Color.HotPink;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(284, 142);
+            this.btnSave.Location = new System.Drawing.Point(284, 169);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(69, 48);
             this.btnSave.TabIndex = 17;
@@ -190,7 +192,7 @@ namespace ProjectAkhir
             this.btnClear.BackColor = System.Drawing.Color.HotPink;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(284, 287);
+            this.btnClear.Location = new System.Drawing.Point(284, 314);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(69, 48);
             this.btnClear.TabIndex = 18;
@@ -203,7 +205,7 @@ namespace ProjectAkhir
             this.btnClose.BackColor = System.Drawing.Color.HotPink;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(26, 396);
+            this.btnClose.Location = new System.Drawing.Point(33, 396);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 42);
             this.btnClose.TabIndex = 19;
@@ -215,7 +217,7 @@ namespace ProjectAkhir
             // 
             this.cmbIDPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbIDPG.FormattingEnabled = true;
-            this.cmbIDPG.Location = new System.Drawing.Point(132, 244);
+            this.cmbIDPG.Location = new System.Drawing.Point(132, 271);
             this.cmbIDPG.Name = "cmbIDPG";
             this.cmbIDPG.Size = new System.Drawing.Size(131, 28);
             this.cmbIDPG.TabIndex = 23;
@@ -225,7 +227,7 @@ namespace ProjectAkhir
             // 
             this.cmbIDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbIDG.FormattingEnabled = true;
-            this.cmbIDG.Location = new System.Drawing.Point(132, 287);
+            this.cmbIDG.Location = new System.Drawing.Point(132, 314);
             this.cmbIDG.Name = "cmbIDG";
             this.cmbIDG.Size = new System.Drawing.Size(131, 28);
             this.cmbIDG.TabIndex = 24;
@@ -235,7 +237,7 @@ namespace ProjectAkhir
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 96);
+            this.label1.Location = new System.Drawing.Point(12, 123);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 25;
@@ -244,7 +246,7 @@ namespace ProjectAkhir
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(132, 86);
+            this.txtID.Location = new System.Drawing.Point(132, 113);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(131, 30);
             this.txtID.TabIndex = 26;
@@ -254,7 +256,7 @@ namespace ProjectAkhir
             this.btnDelete.BackColor = System.Drawing.Color.HotPink;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.Location = new System.Drawing.Point(598, 369);
+            this.btnDelete.Location = new System.Drawing.Point(598, 396);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 46);
             this.btnDelete.TabIndex = 27;
@@ -267,7 +269,7 @@ namespace ProjectAkhir
             this.btnUpdate.BackColor = System.Drawing.Color.HotPink;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnUpdate.Location = new System.Drawing.Point(284, 210);
+            this.btnUpdate.Location = new System.Drawing.Point(284, 237);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(69, 48);
             this.btnUpdate.TabIndex = 28;
@@ -278,13 +280,22 @@ namespace ProjectAkhir
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Stencil", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(289, 18);
+            this.label7.Location = new System.Drawing.Point(270, 15);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 33);
+            this.label7.Size = new System.Drawing.Size(230, 52);
             this.label7.TabIndex = 29;
             this.label7.Text = "Data Obat";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Location = new System.Drawing.Point(5, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(803, 77);
+            this.panel1.TabIndex = 30;
             // 
             // Obat
             // 
@@ -292,7 +303,7 @@ namespace ProjectAkhir
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtID);
@@ -317,6 +328,8 @@ namespace ProjectAkhir
             this.Text = "Obat";
             this.Load += new System.EventHandler(this.Obat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -345,5 +358,6 @@ namespace ProjectAkhir
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel1;
     }
 }
