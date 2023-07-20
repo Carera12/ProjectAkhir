@@ -236,7 +236,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(229, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 52);
+            this.label1.Size = new System.Drawing.Size(343, 51);
             this.label1.TabIndex = 0;
             this.label1.Text = "Data Pembelian";
             // 
@@ -255,7 +255,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.HotPink;
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -267,6 +267,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.BackgroundImage = global::ProjectAkhir.Properties.Resources.Pohon;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDelete);

@@ -272,6 +272,11 @@ namespace ProjectAkhir
             refreshform();
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void txtHarga_TextChanged(object sender, EventArgs e)
         {
 

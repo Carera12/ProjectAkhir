@@ -233,17 +233,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(28, 8);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(371, 52);
+            this.label6.Size = new System.Drawing.Size(367, 51);
             this.label6.TabIndex = 38;
             this.label6.Text = "Data Pemasokan";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.NavajoWhite;
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.label6);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(803, 72);
@@ -254,6 +255,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
+            this.BackgroundImage = global::ProjectAkhir.Properties.Resources.Pohon;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDelete);
@@ -273,6 +276,7 @@
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataGridView1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Pemasok";
             this.Text = "Pemasok";
             this.Load += new System.EventHandler(this.Pemasok_Load);

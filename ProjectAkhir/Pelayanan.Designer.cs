@@ -221,13 +221,13 @@ namespace ProjectAkhir
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(232, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(346, 52);
+            this.label5.Size = new System.Drawing.Size(343, 51);
             this.label5.TabIndex = 22;
             this.label5.Text = "Data Pelayanan";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumPurple;
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(12, -5);
             this.panel1.Name = "panel1";
@@ -239,6 +239,8 @@ namespace ProjectAkhir
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
+            this.BackgroundImage = global::ProjectAkhir.Properties.Resources.Pohon;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDelete);
@@ -256,6 +258,7 @@ namespace ProjectAkhir
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Pelayanan";
             this.Text = "Pelayanan";
             this.Load += new System.EventHandler(this.Pelayanan_Load);
