@@ -18,6 +18,8 @@ namespace ProjectAkhir
         private SqlConnection koneksi;
         private string id, jml, ttl, pem, obt;
         private DateTime tgl;
+        BindingSource customersBindingSource = new BindingSource();
+
 
         private void btnOpen_Click(object sender, EventArgs e)
         {
@@ -25,7 +27,6 @@ namespace ProjectAkhir
             btnOpen.Enabled = false;
         }
 
-        BindingSource customersBindingSource = new BindingSource();
         public Pembelian()
         {
             InitializeComponent();
@@ -132,6 +133,11 @@ namespace ProjectAkhir
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -171,6 +177,7 @@ namespace ProjectAkhir
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
+            cmd.ExecuteReader();
             koneksi.Close();
             cmbObat.ValueMember = "ID_Obat";
             cmbObat.DataSource = ds.Tables[0];

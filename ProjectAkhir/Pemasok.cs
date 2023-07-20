@@ -141,6 +141,11 @@ namespace ProjectAkhir
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public Pemasok()
         {
             InitializeComponent();

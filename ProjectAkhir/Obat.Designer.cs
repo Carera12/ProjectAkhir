@@ -46,8 +46,8 @@ namespace ProjectAkhir
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.cbxIDPG = new System.Windows.Forms.ComboBox();
-            this.cbxIDG = new System.Windows.Forms.ComboBox();
+            this.cmbIDPG = new System.Windows.Forms.ComboBox();
+            this.cmbIDG = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -65,6 +65,7 @@ namespace ProjectAkhir
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(628, 80);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnOpen
             // 
@@ -219,7 +220,7 @@ namespace ProjectAkhir
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(28, 17);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(172, 32);
+            this.label7.Size = new System.Drawing.Size(171, 32);
             this.label7.TabIndex = 20;
             this.label7.Text = "Daftar Obat";
             // 
@@ -244,25 +245,25 @@ namespace ProjectAkhir
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // cbxIDPG
+            // cmbIDPG
             // 
-            this.cbxIDPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxIDPG.FormattingEnabled = true;
-            this.cbxIDPG.Location = new System.Drawing.Point(366, 345);
-            this.cbxIDPG.Name = "cbxIDPG";
-            this.cbxIDPG.Size = new System.Drawing.Size(168, 33);
-            this.cbxIDPG.TabIndex = 23;
-            this.cbxIDPG.SelectedIndexChanged += new System.EventHandler(this.cbxIDPG_SelectedIndexChanged);
+            this.cmbIDPG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIDPG.FormattingEnabled = true;
+            this.cmbIDPG.Location = new System.Drawing.Point(366, 345);
+            this.cmbIDPG.Name = "cmbIDPG";
+            this.cmbIDPG.Size = new System.Drawing.Size(168, 33);
+            this.cmbIDPG.TabIndex = 23;
+            this.cmbIDPG.SelectedIndexChanged += new System.EventHandler(this.cbxIDPG_SelectedIndexChanged);
             // 
-            // cbxIDG
+            // cmbIDG
             // 
-            this.cbxIDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxIDG.FormattingEnabled = true;
-            this.cbxIDG.Location = new System.Drawing.Point(366, 388);
-            this.cbxIDG.Name = "cbxIDG";
-            this.cbxIDG.Size = new System.Drawing.Size(168, 33);
-            this.cbxIDG.TabIndex = 24;
-            this.cbxIDG.SelectedIndexChanged += new System.EventHandler(this.cbxIDG_SelectedIndexChanged);
+            this.cmbIDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbIDG.FormattingEnabled = true;
+            this.cmbIDG.Location = new System.Drawing.Point(366, 388);
+            this.cmbIDG.Name = "cmbIDG";
+            this.cmbIDG.Size = new System.Drawing.Size(168, 33);
+            this.cmbIDG.TabIndex = 24;
+            this.cmbIDG.SelectedIndexChanged += new System.EventHandler(this.cbxIDG_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -290,8 +291,8 @@ namespace ProjectAkhir
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbxIDG);
-            this.Controls.Add(this.cbxIDPG);
+            this.Controls.Add(this.cmbIDG);
+            this.Controls.Add(this.cmbIDPG);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -339,8 +340,8 @@ namespace ProjectAkhir
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox cbxIDPG;
-        private System.Windows.Forms.ComboBox cbxIDG;
+        private System.Windows.Forms.ComboBox cmbIDPG;
+        private System.Windows.Forms.ComboBox cmbIDG;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
     }

@@ -39,7 +39,7 @@ namespace ProjectAkhir
             this.txtAlamat = new System.Windows.Forms.TextBox();
             this.txtNomer = new System.Windows.Forms.TextBox();
             this.txtNama = new System.Windows.Forms.TextBox();
-            this.txtJK = new System.Windows.Forms.ComboBox();
+            this.cmbJK = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.labelJudul = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,6 +48,7 @@ namespace ProjectAkhir
             this.label1 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,18 +160,18 @@ namespace ProjectAkhir
             this.txtNama.TabIndex = 9;
             this.txtNama.TextChanged += new System.EventHandler(this.txtNama_TextChanged);
             // 
-            // txtJK
+            // cmbJK
             // 
-            this.txtJK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtJK.FormattingEnabled = true;
-            this.txtJK.Items.AddRange(new object[] {
+            this.cmbJK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbJK.FormattingEnabled = true;
+            this.cmbJK.Items.AddRange(new object[] {
             "L",
             "P"});
-            this.txtJK.Location = new System.Drawing.Point(293, 268);
-            this.txtJK.Name = "txtJK";
-            this.txtJK.Size = new System.Drawing.Size(252, 33);
-            this.txtJK.TabIndex = 12;
-            this.txtJK.SelectedIndexChanged += new System.EventHandler(this.txtJK_SelectedIndexChanged);
+            this.cmbJK.Location = new System.Drawing.Point(293, 268);
+            this.cmbJK.Name = "cmbJK";
+            this.cmbJK.Size = new System.Drawing.Size(252, 33);
+            this.cmbJK.TabIndex = 12;
+            this.cmbJK.SelectedIndexChanged += new System.EventHandler(this.txtJK_SelectedIndexChanged);
             // 
             // btnClose
             // 
@@ -192,7 +193,7 @@ namespace ProjectAkhir
             this.labelJudul.ForeColor = System.Drawing.Color.White;
             this.labelJudul.Location = new System.Drawing.Point(20, 16);
             this.labelJudul.Name = "labelJudul";
-            this.labelJudul.Size = new System.Drawing.Size(198, 32);
+            this.labelJudul.Size = new System.Drawing.Size(197, 32);
             this.labelJudul.TabIndex = 15;
             this.labelJudul.Text = "Data Pembeli";
             // 
@@ -204,6 +205,7 @@ namespace ProjectAkhir
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 66);
             this.panel1.TabIndex = 16;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // dataGridView1
             // 
@@ -246,7 +248,6 @@ namespace ProjectAkhir
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(252, 30);
             this.txtId.TabIndex = 20;
-            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // pictureBox1
             // 
@@ -257,6 +258,17 @@ namespace ProjectAkhir
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 21;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(660, 361);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 22;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Pembeli
             // 
@@ -264,13 +276,14 @@ namespace ProjectAkhir
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.txtJK);
+            this.Controls.Add(this.cmbJK);
             this.Controls.Add(this.txtNomer);
             this.Controls.Add(this.txtAlamat);
             this.Controls.Add(this.txtNama);
@@ -305,7 +318,7 @@ namespace ProjectAkhir
         private System.Windows.Forms.TextBox txtAlamat;
         private System.Windows.Forms.TextBox txtNomer;
         private System.Windows.Forms.TextBox txtNama;
-        private System.Windows.Forms.ComboBox txtJK;
+        private System.Windows.Forms.ComboBox cmbJK;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label labelJudul;
         private System.Windows.Forms.Panel panel1;
@@ -314,5 +327,6 @@ namespace ProjectAkhir
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
