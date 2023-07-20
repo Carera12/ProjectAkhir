@@ -46,17 +46,19 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtNama = new System.Windows.Forms.TextBox();
             this.cmbJK = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Stencil", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(279, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(262, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(220, 33);
+            this.label1.Size = new System.Drawing.Size(297, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "Data Pembeli";
             // 
@@ -65,7 +67,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(407, 293);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 16);
+            this.label2.Size = new System.Drawing.Size(106, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nomor Telepon";
             // 
@@ -74,7 +76,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(407, 253);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 16);
+            this.label3.Size = new System.Drawing.Size(51, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Alamat";
             // 
@@ -83,7 +85,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(150, 319);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 16);
+            this.label4.Size = new System.Drawing.Size(95, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Jenis Kelamin";
             // 
@@ -92,7 +94,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(150, 270);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 16);
+            this.label5.Size = new System.Drawing.Size(99, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Nama Pembeli";
             // 
@@ -101,7 +103,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(150, 232);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 16);
+            this.label6.Size = new System.Drawing.Size(75, 17);
             this.label6.TabIndex = 5;
             this.label6.Text = "ID Pembeli";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -182,11 +184,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.LightPink;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(69, 88);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(658, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(658, 107);
             this.dataGridView1.TabIndex = 12;
             // 
             // txtTlp
@@ -228,12 +230,23 @@
             this.cmbJK.Size = new System.Drawing.Size(54, 24);
             this.cmbJK.TabIndex = 17;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel1.Location = new System.Drawing.Point(1, -3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(802, 74);
+            this.panel1.TabIndex = 18;
+            // 
             // Pembeli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.cmbJK);
             this.Controls.Add(this.txtNama);
             this.Controls.Add(this.txtID);
@@ -251,11 +264,12 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Pembeli";
             this.Text = "Pembeli";
             this.Load += new System.EventHandler(this.Pembeli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,5 +295,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtNama;
         private System.Windows.Forms.ComboBox cmbJK;
+        private System.Windows.Forms.Panel panel1;
     }
 }
