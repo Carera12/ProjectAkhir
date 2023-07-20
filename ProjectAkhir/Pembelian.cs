@@ -138,6 +138,32 @@ namespace ProjectAkhir
 
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string pem = dataGridView1.SelectedRows[0].Cells["ID_Pembelian"].Value.ToString();
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Pembelian WHERE ID_Pembelian = @ID_Pembelian";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@ID_Pembelian", pem);
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+
+                    MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Hide();

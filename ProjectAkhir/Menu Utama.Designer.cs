@@ -62,9 +62,9 @@
             this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dataPembeliToolStripMenuItem,
             this.dataPegawaiToolStripMenuItem,
+            this.dataGudangToolStripMenuItem,
             this.dataObatToolStripMenuItem,
             this.dataToolStripMenuItem,
-            this.dataGudangToolStripMenuItem,
             this.dataTransaksiToolStripMenuItem,
             this.dataPelayananToolStripMenuItem,
             this.dataPemasokanToolStripMenuItem});

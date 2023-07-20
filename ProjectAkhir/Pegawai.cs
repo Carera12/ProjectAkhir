@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace ProjectAkhir
 {
@@ -22,8 +23,6 @@ namespace ProjectAkhir
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            this.bnPegawai.BindingSource = this.customersBindingSource;
-            refreshform();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -34,16 +33,21 @@ namespace ProjectAkhir
         }
         private void refreshform()
         {
+
+            txtIDPeg.Text = "";
             txtIDPeg.Enabled = false;
+            txtNamaPeg.Text = "";
             txtNamaPeg.Enabled = false;
-            cmbJK.Enabled = false;
+            txtAlmt.Text = "";
             txtAlmt.Enabled = false;
+            txtNoTlp.Text = "";
             txtNoTlp.Enabled = false;
+
+            cmbJK.Enabled = false;
+
             btnAdd.Enabled = true;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
-            clearBinding();
-            FormDataPegawai_Load();
         }
 
 
@@ -52,17 +56,72 @@ namespace ProjectAkhir
 
         }
 
+        private void Pegawai_Load(object sender, EventArgs e)
+        {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_Pegawai, nama_pegawai, JK, Alamat, no_telepon FROM Pegawai", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
+
+            this.customersBindingSource.DataSource = ds.Tables[0];
+            this.txtIDPeg.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "ID_Pegawai", true));
+            this.txtNamaPeg.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "nama_pegawai", true));
+            this.txtAlmt.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "Alamat", true));
+            this.cmbJK.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "JK", true));
+            this.txtNoTlp.DataBindings.Add(
+                 new Binding("Text", this.customersBindingSource, "no_telepon", true));
+            koneksi.Close();
+            refreshform();
+        }
+
         private void btnClear_Click(object sender, EventArgs e)
         {
             refreshform();
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnOpen.Enabled = false;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string pem = dataGridView1.SelectedRows[0].Cells["ID_Pegawai"].Value.ToString();
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Pegawai WHERE ID_Pegawai = @ID_Pegawai";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@ID_Pegawai", pem);
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+
+                    MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            id = txtIDPeg.Text.Trim();
-            nama = txtNamaPeg.Text.Trim();
-            alamat = txtAlmt.Text.Trim();
-            jk = cmbJK.SelectedItem.ToString();
-            notlp = txtNoTlp.Text.Trim();
+            id = txtIDPeg.Text;
+            nama = txtNamaPeg.Text;
+            alamat = txtAlmt.Text;
+            jk = cmbJK.Text;
+            notlp = txtNoTlp.Text;
 
             if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(alamat) || string.IsNullOrEmpty(jk) || string.IsNullOrEmpty(notlp))
             {
@@ -83,54 +142,37 @@ namespace ProjectAkhir
 
                 MessageBox.Show("Data has been saved to the database.");
             }
+            dataGridView();
             refreshform();
+        }
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "SELECT ID_Pegawai, nama_pegawai, Alamat, JK, no_telepon FROM dbo.Pegawai";
+            SqlDataAdapter adapter = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtIDPeg.Text = "";
-            txtNamaPeg.Text = "";
-            txtAlmt.Text = "";
-            txtNoTlp.Text = "";
             txtIDPeg.Enabled = true;
             txtNamaPeg.Enabled = true;
-            cmbJK.Enabled = true;
-            txtAlmt.Enabled = true;
             txtAlmt.Enabled = true;
             txtNoTlp.Enabled = true;
+
+            cmbJK.Enabled = true;
+
             btnSave.Enabled = true;
             btnClear.Enabled = true;
             btnAdd.Enabled = false;
         }
-        private void clearBinding()
-        {
-            this.txtIDPeg.DataBindings.Clear();
-            this.txtNamaPeg.DataBindings.Clear();
-            this.txtAlmt.DataBindings.Clear();
-            this.cmbJK.DataBindings.Clear();
-            this.txtNoTlp.DataBindings.Clear();
-        }
+        
 
-        private void FormDataPegawai_Load()
-        {
-            koneksi.Open();
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_Pegawai, nama_pegawai, JK, Alamat, no_telepon FROM Pegawai", koneksi));
-            DataSet ds = new DataSet();
-            dataAdapter1.Fill(ds);
-
-            this.customersBindingSource.DataSource = ds.Tables[0];
-            this.txtIDPeg.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "ID_Pegawai", true));
-            this.txtNamaPeg.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "nama_pegawai", true));
-            this.txtAlmt.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "Alamat", true));
-            this.cmbJK.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "JK", true));
-            this.txtNoTlp.DataBindings.Add(
-                 new Binding("Text", this.customersBindingSource, "no_telepon", true));
-            koneksi.Close();
-        }
+        
 
         
     }

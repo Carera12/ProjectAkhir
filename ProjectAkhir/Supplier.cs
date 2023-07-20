@@ -21,55 +21,29 @@ namespace ProjectAkhir
         {
             InitializeComponent();
             koneksi = new SqlConnection(stringConnection);
-            this.bnSupplier.BindingSource = this.customersBindingSource;
-            refreshform();
         }
 
-        private void clearBinding()
-        {
-            this.txtIDSup.DataBindings.Clear();
-            this.txtNamaSup.DataBindings.Clear();
-            this.txtAlmt.DataBindings.Clear();
-            this.txtNoTlp.DataBindings.Clear();
-        }
-        private void FormDataSupplier_Load()
-        {
-            koneksi.Open();
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_supplier, nama_supplier, Alamat_supplier, No_Telepon FROM Supplier", koneksi));
-            DataSet ds = new DataSet();
-            dataAdapter1.Fill(ds);
-
-            this.customersBindingSource.DataSource = ds.Tables[0];
-            this.txtIDSup.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "ID_supplier", true));
-            this.txtNamaSup.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "nama_supplier", true));
-            this.txtAlmt.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "Alamat_supplier", true));
-            this.txtNoTlp.DataBindings.Add(
-                 new Binding("Text", this.customersBindingSource, "No_Telepon", true));
-            koneksi.Close();
-        }
+       
+        
 
         private void refreshform()
-        {
-            txtIDSup.Enabled = false;
-            txtNamaSup.Enabled = false;
-            txtAlmt.Enabled = false;
-            txtNoTlp.Enabled = false;
-            btnAdd.Enabled = true;
-            btnSave.Enabled = false;
-            btnClear.Enabled = false;
-            clearBinding();
-            FormDataSupplier_Load();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
         {
             txtIDSup.Text = "";
             txtNamaSup.Text = "";
             txtAlmt.Text = "";
             txtNoTlp.Text = "";
+            txtIDSup.Enabled = false;
+            txtNamaSup.Enabled = false;
+            txtAlmt.Enabled = false;
+            txtNoTlp.Enabled = false;
+
+            btnAdd.Enabled = true;
+            btnSave.Enabled = false;
+            btnClear.Enabled = false;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {            
             txtIDSup.Enabled = true;
             txtNamaSup.Enabled = true;
             txtAlmt.Enabled = true;
@@ -85,12 +59,56 @@ namespace ProjectAkhir
             refreshform();
         }
 
+        private void bntOpen_Click(object sender, EventArgs e)
+        {
+            dataGridView();
+            btnOpen.Enabled = false;
+        }
+        private void dataGridView()
+        {
+            koneksi.Open();
+            string str = "SELECT ID_supplier, nama_supplier, Alamat_supplier, No_Telepon FROM dbo.Supplier";
+            SqlDataAdapter adapter = new SqlDataAdapter(str, koneksi);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGridView1.DataSource = dataTable;
+            koneksi.Close();
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string pem = dataGridView1.SelectedRows[0].Cells["ID_Supplier"].Value.ToString();
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Supplier WHERE ID_Supplier = @ID_Supplier";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@ID_Supplier", pem);
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+
+                    MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            id = txtIDSup.Text.Trim();
-            nama = txtNamaSup.Text.Trim();
-            alamat = txtAlmt.Text.Trim();
-            notlp = txtNoTlp.Text.Trim();
+            id = txtIDSup.Text;
+            nama = txtNamaSup.Text;
+            alamat = txtAlmt.Text;
+            notlp = txtNoTlp.Text;
 
             if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(nama) || string.IsNullOrEmpty(alamat) || string.IsNullOrEmpty(notlp))
             {
@@ -110,6 +128,7 @@ namespace ProjectAkhir
 
                 MessageBox.Show("Data has been saved to the database.");
             }
+            dataGridView();
             refreshform();
         }
 
@@ -123,12 +142,24 @@ namespace ProjectAkhir
 
         private void Supplier_Load(object sender, EventArgs e)
         {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_supplier, nama_supplier, Alamat_supplier, No_Telepon FROM Supplier", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
 
+            this.customersBindingSource.DataSource = ds.Tables[0];
+            this.txtIDSup.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "ID_supplier", true));
+            this.txtNamaSup.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "nama_supplier", true));
+            this.txtAlmt.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "Alamat_supplier", true));
+            this.txtNoTlp.DataBindings.Add(
+                 new Binding("Text", this.customersBindingSource, "No_Telepon", true));
+            koneksi.Close();
+            refreshform();
         }
 
-        private void Supplier_Load()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

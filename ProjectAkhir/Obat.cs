@@ -70,10 +70,9 @@ namespace ProjectAkhir
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            Form1 fm = new Form1();
+            fm.Show();
             this.Hide();
-            this.Close();
-            Form1 mu = new Form1();
-            mu.ShowDialog();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -84,7 +83,10 @@ namespace ProjectAkhir
         private void Obat_Load(object sender, EventArgs e)
         {
             koneksi.Open();
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_Obat, nama_obat, jenis_obat, harga_obat, ID_Pegawai, ID_Gudang FROM Obat", koneksi));
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT m.ID_Obat, m.nama_obat, m.jenis_obat, " +
+                "m.harga_obat, p.ID_Pegawai, k.ID_Gudang FROM dbo.Obat m " +
+                "JOIN dbo.Pegawai p ON m.ID_Pegawai = p.ID_Pegawai " +
+                "JOIN dbo.Gudang k ON m.ID_Gudang = k.ID_Gudang", koneksi));
             DataSet ds = new DataSet();
             dataAdapter1.Fill(ds);
 
@@ -119,6 +121,12 @@ namespace ProjectAkhir
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            txtID.Text = "";
+            txtNama.Text = "";
+            txtHarga.Text = "";
+            cmbJenis.Text = "";
+            cmbIDPG.Text = "";
+            cmbIDG.Text = "";
             txtID.Enabled = true;
             txtNama.Enabled = true;
             txtHarga.Enabled = true;
@@ -186,6 +194,82 @@ namespace ProjectAkhir
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string pem = dataGridView1.SelectedRows[0].Cells["ID_Obat"].Value.ToString();
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Obat WHERE ID_Obat = @ID_Obat";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@ID_Obat", pem);
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+
+                    MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string idobt = txtID.Text;
+            string nama = txtNama.Text;
+            string harga = txtHarga.Text;
+            string jenis = cmbJenis.Text;
+            string idpeg = cmbIDPG.Text;
+            string idgdg = cmbIDG.Text;
+
+            if (string.IsNullOrEmpty(idobt) || string.IsNullOrEmpty(nama) ||
+                string.IsNullOrEmpty(harga) || string.IsNullOrEmpty(jenis) ||
+                string.IsNullOrEmpty(idpeg) || string.IsNullOrEmpty(idgdg))
+            {
+                MessageBox.Show("Mohon lengkapi semua kolom.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            koneksi.Open();
+
+            // Check if the specified ID values exist in the related tables
+            string checkStr = "SELECT COUNT(*) FROM dbo.Pegawai WHERE ID_Pegawai = @ID_Pegawai; SELECT COUNT(*) FROM dbo.Gudang WHERE ID_Gudang = @ID_Gudang";
+            SqlCommand checkCmd = new SqlCommand(checkStr, koneksi);
+            checkCmd.Parameters.AddWithValue("@ID_Pegawai", idpeg);
+            checkCmd.Parameters.AddWithValue("@ID_Gudang", idgdg);
+            int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+
+            if (count == 0)
+            {
+                koneksi.Close();
+                MessageBox.Show("ID Pegawai atau ID Gudang tidak valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string updateStr = "UPDATE dbo.Obat SET ID_Obat = @ID_Obat, nama_obat = @nama_obat, jenis_obat = @jenis_obat, harga_obat = @harga_obat " +
+                               "WHERE ID_Obat = @ID_Obat AND ID_Pegawai = @ID_Pegawai AND ID_Gudang = @ID_Gudang";
+            SqlCommand updateCmd = new SqlCommand(updateStr, koneksi);
+            updateCmd.Parameters.AddWithValue("@ID_Obat", idobt);
+            updateCmd.Parameters.AddWithValue("@nama_obat", nama);
+            updateCmd.Parameters.AddWithValue("@jenis_obat", jenis);
+            updateCmd.Parameters.AddWithValue("@harga_obat", harga);
+            updateCmd.Parameters.AddWithValue("@ID_Pegawai", idpeg);
+            updateCmd.Parameters.AddWithValue("@ID_Gudang", idgdg);
+            updateCmd.ExecuteNonQuery();
+
+            koneksi.Close();
+            MessageBox.Show("Data berhasil diperbarui.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
         }
 
         private void txtHarga_TextChanged(object sender, EventArgs e)

@@ -47,6 +47,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -132,7 +133,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(319, 309);
+            this.label1.Location = new System.Drawing.Point(335, 306);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 25;
@@ -141,7 +142,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(319, 263);
+            this.label2.Location = new System.Drawing.Point(335, 263);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 16);
             this.label2.TabIndex = 26;
@@ -150,7 +151,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 317);
+            this.label3.Location = new System.Drawing.Point(42, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 16);
             this.label3.TabIndex = 27;
@@ -176,14 +177,14 @@
             // 
             // txtJml
             // 
-            this.txtJml.Location = new System.Drawing.Point(174, 309);
+            this.txtJml.Location = new System.Drawing.Point(187, 306);
             this.txtJml.Name = "txtJml";
             this.txtJml.Size = new System.Drawing.Size(100, 22);
             this.txtJml.TabIndex = 30;
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(174, 263);
+            this.txtid.Location = new System.Drawing.Point(187, 263);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(100, 22);
             this.txtid.TabIndex = 31;
@@ -243,12 +244,23 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(642, 223);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 37;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Pemasok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Pink;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtTgl);
             this.Controls.Add(this.cmbObt);
@@ -300,5 +312,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -33,27 +33,12 @@ namespace ProjectAkhir
             txtTanggal.Text = "";
             txtTanggal.Enabled = false;
 
+            btnAdd.Enabled = true;
             btnSave.Enabled = false;
             btnClear.Enabled = false;
 
-            FormDataMahasiswa_Load();
         }
-        private void FormDataMahasiswa_Load()
-        {
-            koneksi.Open();
-            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_Gudang, Jumlah, tgl_masuk FROM Gudang", koneksi));
-            DataSet ds = new DataSet();
-            dataAdapter1.Fill(ds);
-
-            this.customersBindingSource.DataSource = ds.Tables[0];
-            this.txtIDG.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "ID_Gudang", true));
-            this.txtJumlah.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "Jumlah", true));
-            this.txtTanggal.DataBindings.Add(
-                new Binding("Text", this.customersBindingSource, "tgl_masuk", true));
-            koneksi.Close();
-        }
+       
 
         private void dataGridView()
         {
@@ -75,7 +60,20 @@ namespace ProjectAkhir
 
         private void Gudang_Load(object sender, EventArgs e)
         {
+            koneksi.Open();
+            SqlDataAdapter dataAdapter1 = new SqlDataAdapter(new SqlCommand("SELECT ID_Gudang, Jumlah, tgl_masuk FROM Gudang", koneksi));
+            DataSet ds = new DataSet();
+            dataAdapter1.Fill(ds);
 
+            this.customersBindingSource.DataSource = ds.Tables[0];
+            this.txtIDG.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "ID_Gudang", true));
+            this.txtJumlah.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "Jumlah", true));
+            this.txtTanggal.DataBindings.Add(
+                new Binding("Text", this.customersBindingSource, "tgl_masuk", true));
+            koneksi.Close();
+            refreshform();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -94,8 +92,6 @@ namespace ProjectAkhir
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtIDG.Text = "";
-            txtJumlah.Text = "";
             txtIDG.Enabled = true;
             txtJumlah.Enabled = true;
 
@@ -114,11 +110,11 @@ namespace ProjectAkhir
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            id = txtIDG.Text.Trim();
-            jml = txtJumlah.Text.Trim();
+            id = txtIDG.Text;
+            jml = txtJumlah.Text;
             tgl = txtTanggal.Value;
 
-            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(id) || string.IsNullOrEmpty(jml))
+            if (string.IsNullOrEmpty(id) || string.IsNullOrEmpty(jml))
             {
                 MessageBox.Show("Please fill in all identity fields!");
             }
@@ -168,6 +164,32 @@ namespace ProjectAkhir
         private void txtIDG_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DialogResult result = MessageBox.Show("Apakah Anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string pem = dataGridView1.SelectedRows[0].Cells["ID_Gudang"].Value.ToString();
+
+                    koneksi.Open();
+                    string str = "DELETE FROM dbo.Gudang WHERE ID_Gudang = @ID_Gudang";
+                    SqlCommand cmd = new SqlCommand(str, koneksi);
+                    cmd.Parameters.AddWithValue("@ID_Gudang", pem);
+                    cmd.ExecuteNonQuery();
+                    koneksi.Close();
+
+                    MessageBox.Show("Data berhasil dihapus", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    dataGridView();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih baris data yang ingin dihapus", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
