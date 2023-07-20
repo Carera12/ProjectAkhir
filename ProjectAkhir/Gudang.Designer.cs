@@ -39,37 +39,33 @@ namespace ProjectAkhir
             this.txtJumlah = new System.Windows.Forms.TextBox();
             this.txtTanggal = new System.Windows.Forms.DateTimePicker();
             this.btnClose = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIDG = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Delete = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.DeepPink;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 108);
+            this.dataGridView1.Location = new System.Drawing.Point(31, 45);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(587, 106);
+            this.dataGridView1.Size = new System.Drawing.Size(611, 242);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnOpen
             // 
-            this.btnOpen.BackColor = System.Drawing.Color.DeepPink;
+            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(648, 108);
+            this.btnOpen.Location = new System.Drawing.Point(677, 81);
             this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(115, 64);
+            this.btnOpen.Size = new System.Drawing.Size(75, 47);
             this.btnOpen.TabIndex = 1;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = false;
@@ -77,10 +73,10 @@ namespace ProjectAkhir
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.DeepPink;
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(426, 246);
+            this.btnAdd.Location = new System.Drawing.Point(553, 295);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(84, 35);
             this.btnAdd.TabIndex = 2;
@@ -90,10 +86,10 @@ namespace ProjectAkhir
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.DeepPink;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(426, 287);
+            this.btnClear.Location = new System.Drawing.Point(553, 336);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(84, 37);
             this.btnClear.TabIndex = 3;
@@ -103,10 +99,10 @@ namespace ProjectAkhir
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.DeepPink;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(426, 330);
+            this.btnSave.Location = new System.Drawing.Point(553, 379);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 36);
             this.btnSave.TabIndex = 4;
@@ -117,10 +113,10 @@ namespace ProjectAkhir
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
+            this.label2.BackColor = System.Drawing.Color.Thistle;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(31, 296);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label2.Location = new System.Drawing.Point(158, 345);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 6;
@@ -129,10 +125,10 @@ namespace ProjectAkhir
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Control;
+            this.label3.BackColor = System.Drawing.Color.Thistle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(31, 340);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(158, 389);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 16);
             this.label3.TabIndex = 7;
@@ -141,7 +137,7 @@ namespace ProjectAkhir
             // 
             // txtJumlah
             // 
-            this.txtJumlah.Location = new System.Drawing.Point(171, 293);
+            this.txtJumlah.Location = new System.Drawing.Point(298, 342);
             this.txtJumlah.Name = "txtJumlah";
             this.txtJumlah.Size = new System.Drawing.Size(203, 22);
             this.txtJumlah.TabIndex = 9;
@@ -149,7 +145,7 @@ namespace ProjectAkhir
             // 
             // txtTanggal
             // 
-            this.txtTanggal.Location = new System.Drawing.Point(171, 340);
+            this.txtTanggal.Location = new System.Drawing.Point(298, 389);
             this.txtTanggal.Name = "txtTanggal";
             this.txtTanggal.Size = new System.Drawing.Size(200, 22);
             this.txtTanggal.TabIndex = 10;
@@ -157,10 +153,10 @@ namespace ProjectAkhir
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.DeepPink;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(31, 397);
+            this.btnClose.Location = new System.Drawing.Point(31, 402);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 36);
             this.btnClose.TabIndex = 11;
@@ -168,34 +164,13 @@ namespace ProjectAkhir
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(26, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(194, 32);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Data Gudang";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DeepPink;
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(797, 86);
-            this.panel1.TabIndex = 12;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.BackColor = System.Drawing.Color.Thistle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(31, 255);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(158, 304);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(80, 16);
             this.label1.TabIndex = 5;
@@ -203,42 +178,45 @@ namespace ProjectAkhir
             // 
             // txtIDG
             // 
-            this.txtIDG.Location = new System.Drawing.Point(171, 252);
+            this.txtIDG.Location = new System.Drawing.Point(298, 301);
             this.txtIDG.Name = "txtIDG";
             this.txtIDG.Size = new System.Drawing.Size(203, 22);
             this.txtIDG.TabIndex = 13;
             this.txtIDG.TextChanged += new System.EventHandler(this.txtIDG_TextChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjectAkhir.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(-158, -38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1114, 589);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(678, 178);
+            this.Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.ForeColor = System.Drawing.SystemColors.Control;
+            this.Delete.Location = new System.Drawing.Point(677, 161);
             this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.Size = new System.Drawing.Size(75, 46);
             this.Delete.TabIndex = 15;
             this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = true;
+            this.Delete.UseVisualStyleBackColor = false;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Stencil", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Purple;
+            this.label4.Location = new System.Drawing.Point(25, 9);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 33);
+            this.label4.TabIndex = 16;
+            this.label4.Text = "Gudang";
             // 
             // Gudang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Pink;
+            this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.txtIDG);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtTanggal);
             this.Controls.Add(this.txtJumlah);
@@ -250,14 +228,10 @@ namespace ProjectAkhir
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.pictureBox1);
             this.Name = "Gudang";
             this.Text = "Gudang";
             this.Load += new System.EventHandler(this.Gudang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,11 +249,9 @@ namespace ProjectAkhir
         private System.Windows.Forms.TextBox txtJumlah;
         private System.Windows.Forms.DateTimePicker txtTanggal;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIDG;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Delete;
+        private System.Windows.Forms.Label label4;
     }
 }

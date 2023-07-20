@@ -29,151 +29,141 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.dataPembeliToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataPegawaiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataObatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataGudangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataTransaksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataPelayananToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dataPemasokanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.DataGudang = new System.Windows.Forms.Button();
+            this.DataSupplier = new System.Windows.Forms.Button();
+            this.DataPemasokkan = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.DataPelayanan = new System.Windows.Forms.Button();
+            this.DataPembelian = new System.Windows.Forms.Button();
+            this.DataPembeli = new System.Windows.Forms.Button();
+            this.DataPegawai = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // DataGudang
             // 
-            this.toolStrip1.BackColor = System.Drawing.Color.DeepPink;
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripDropDownButton1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 27);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.DataGudang.BackColor = System.Drawing.Color.LemonChiffon;
+            this.DataGudang.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataGudang.BackgroundImage")));
+            this.DataGudang.Location = new System.Drawing.Point(533, 270);
+            this.DataGudang.Name = "DataGudang";
+            this.DataGudang.Size = new System.Drawing.Size(144, 72);
+            this.DataGudang.TabIndex = 8;
+            this.DataGudang.Text = "Gudang";
+            this.DataGudang.UseVisualStyleBackColor = false;
+            this.DataGudang.Click += new System.EventHandler(this.button8_Click);
             // 
-            // toolStripDropDownButton1
+            // DataSupplier
             // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dataPembeliToolStripMenuItem,
-            this.dataPegawaiToolStripMenuItem,
-            this.dataGudangToolStripMenuItem,
-            this.dataObatToolStripMenuItem,
-            this.dataToolStripMenuItem,
-            this.dataTransaksiToolStripMenuItem,
-            this.dataPelayananToolStripMenuItem,
-            this.dataPemasokanToolStripMenuItem});
-            this.toolStripDropDownButton1.ForeColor = System.Drawing.Color.White;
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(162, 24);
-            this.toolStripDropDownButton1.Text = "Data Apotek Cemara";
+            this.DataSupplier.BackColor = System.Drawing.Color.LemonChiffon;
+            this.DataSupplier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataSupplier.BackgroundImage")));
+            this.DataSupplier.Location = new System.Drawing.Point(334, 315);
+            this.DataSupplier.Name = "DataSupplier";
+            this.DataSupplier.Size = new System.Drawing.Size(144, 72);
+            this.DataSupplier.TabIndex = 7;
+            this.DataSupplier.Text = "Supplier";
+            this.DataSupplier.UseVisualStyleBackColor = false;
+            this.DataSupplier.Click += new System.EventHandler(this.DataSupplier_Click);
             // 
-            // dataPembeliToolStripMenuItem
+            // DataPemasokkan
             // 
-            this.dataPembeliToolStripMenuItem.Name = "dataPembeliToolStripMenuItem";
-            this.dataPembeliToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataPembeliToolStripMenuItem.Text = "Data Pembeli";
-            this.dataPembeliToolStripMenuItem.Click += new System.EventHandler(this.dataPembeliToolStripMenuItem_Click);
+            this.DataPemasokkan.BackColor = System.Drawing.Color.LemonChiffon;
+            this.DataPemasokkan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPemasokkan.BackgroundImage")));
+            this.DataPemasokkan.Location = new System.Drawing.Point(126, 270);
+            this.DataPemasokkan.Name = "DataPemasokkan";
+            this.DataPemasokkan.Size = new System.Drawing.Size(144, 72);
+            this.DataPemasokkan.TabIndex = 6;
+            this.DataPemasokkan.Text = "Pemasokkan";
+            this.DataPemasokkan.UseVisualStyleBackColor = false;
+            this.DataPemasokkan.Click += new System.EventHandler(this.DataPemasokkan_Click);
             // 
-            // dataPegawaiToolStripMenuItem
+            // button5
             // 
-            this.dataPegawaiToolStripMenuItem.Name = "dataPegawaiToolStripMenuItem";
-            this.dataPegawaiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataPegawaiToolStripMenuItem.Text = "Data Pegawai";
-            this.dataPegawaiToolStripMenuItem.Click += new System.EventHandler(this.dataPegawaiToolStripMenuItem_Click);
+            this.button5.BackColor = System.Drawing.Color.LemonChiffon;
+            this.button5.Location = new System.Drawing.Point(330, 53);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(144, 72);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Obat";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // dataObatToolStripMenuItem
+            // DataPelayanan
             // 
-            this.dataObatToolStripMenuItem.Name = "dataObatToolStripMenuItem";
-            this.dataObatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataObatToolStripMenuItem.Text = "Data Obat";
-            this.dataObatToolStripMenuItem.Click += new System.EventHandler(this.dataObatToolStripMenuItem_Click);
+            this.DataPelayanan.BackColor = System.Drawing.Color.LemonChiffon;
+            this.DataPelayanan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPelayanan.BackgroundImage")));
+            this.DataPelayanan.Location = new System.Drawing.Point(210, 181);
+            this.DataPelayanan.Name = "DataPelayanan";
+            this.DataPelayanan.Size = new System.Drawing.Size(144, 72);
+            this.DataPelayanan.TabIndex = 4;
+            this.DataPelayanan.Text = "Pelayanan";
+            this.DataPelayanan.UseVisualStyleBackColor = false;
+            this.DataPelayanan.Click += new System.EventHandler(this.DataPelayanan_Click);
             // 
-            // dataToolStripMenuItem
+            // DataPembelian
             // 
-            this.dataToolStripMenuItem.Name = "dataToolStripMenuItem";
-            this.dataToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataToolStripMenuItem.Text = "Data Suplier";
-            this.dataToolStripMenuItem.Click += new System.EventHandler(this.dataToolStripMenuItem_Click);
+            this.DataPembelian.BackColor = System.Drawing.Color.LemonChiffon;
+            this.DataPembelian.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPembelian.BackgroundImage")));
+            this.DataPembelian.Location = new System.Drawing.Point(422, 181);
+            this.DataPembelian.Name = "DataPembelian";
+            this.DataPembelian.Size = new System.Drawing.Size(144, 72);
+            this.DataPembelian.TabIndex = 3;
+            this.DataPembelian.Text = "Pembelian";
+            this.DataPembelian.UseVisualStyleBackColor = false;
+            this.DataPembelian.Click += new System.EventHandler(this.DataPembelian_Click);
             // 
-            // dataGudangToolStripMenuItem
+            // DataPembeli
             // 
-            this.dataGudangToolStripMenuItem.Name = "dataGudangToolStripMenuItem";
-            this.dataGudangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataGudangToolStripMenuItem.Text = "Data Gudang";
-            this.dataGudangToolStripMenuItem.Click += new System.EventHandler(this.dataGudangToolStripMenuItem_Click);
+            this.DataPembeli.BackColor = System.Drawing.Color.LemonChiffon;
+            this.DataPembeli.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPembeli.BackgroundImage")));
+            this.DataPembeli.Location = new System.Drawing.Point(122, 91);
+            this.DataPembeli.Name = "DataPembeli";
+            this.DataPembeli.Size = new System.Drawing.Size(144, 72);
+            this.DataPembeli.TabIndex = 2;
+            this.DataPembeli.Text = "Pembeli";
+            this.DataPembeli.UseVisualStyleBackColor = false;
+            this.DataPembeli.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataTransaksiToolStripMenuItem
+            // DataPegawai
             // 
-            this.dataTransaksiToolStripMenuItem.Name = "dataTransaksiToolStripMenuItem";
-            this.dataTransaksiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataTransaksiToolStripMenuItem.Text = "Data Pembelian";
-            this.dataTransaksiToolStripMenuItem.Click += new System.EventHandler(this.dataTransaksiToolStripMenuItem_Click);
-            // 
-            // dataPelayananToolStripMenuItem
-            // 
-            this.dataPelayananToolStripMenuItem.Name = "dataPelayananToolStripMenuItem";
-            this.dataPelayananToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataPelayananToolStripMenuItem.Text = "Data Pelayanan";
-            this.dataPelayananToolStripMenuItem.Click += new System.EventHandler(this.dataPelayananToolStripMenuItem_Click);
-            // 
-            // dataPemasokanToolStripMenuItem
-            // 
-            this.dataPemasokanToolStripMenuItem.Name = "dataPemasokanToolStripMenuItem";
-            this.dataPemasokanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.dataPemasokanToolStripMenuItem.Text = "Data Pemasokan";
-            this.dataPemasokanToolStripMenuItem.Click += new System.EventHandler(this.dataPemasokanToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProjectAkhir.Properties.Resources.Logo;
-            this.pictureBox1.Location = new System.Drawing.Point(128, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(520, 382);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.DataPegawai.BackColor = System.Drawing.Color.LemonChiffon;
+            this.DataPegawai.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DataPegawai.BackgroundImage")));
+            this.DataPegawai.Location = new System.Drawing.Point(529, 91);
+            this.DataPegawai.Name = "DataPegawai";
+            this.DataPegawai.Size = new System.Drawing.Size(144, 72);
+            this.DataPegawai.TabIndex = 1;
+            this.DataPegawai.Text = "Pegawai";
+            this.DataPegawai.UseVisualStyleBackColor = false;
+            this.DataPegawai.Click += new System.EventHandler(this.DataPegawai_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Pink;
+            this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.DataGudang);
+            this.Controls.Add(this.DataSupplier);
+            this.Controls.Add(this.DataPemasokkan);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.DataPelayanan);
+            this.Controls.Add(this.DataPembelian);
+            this.Controls.Add(this.DataPembeli);
+            this.Controls.Add(this.DataPegawai);
             this.Name = "Form1";
             this.Text = "Menu Utama";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem dataPembeliToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataPegawaiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataObatToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataGudangToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataTransaksiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataPelayananToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dataPemasokanToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button DataPegawai;
+        private System.Windows.Forms.Button DataPembeli;
+        private System.Windows.Forms.Button DataPembelian;
+        private System.Windows.Forms.Button DataPelayanan;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button DataPemasokkan;
+        private System.Windows.Forms.Button DataSupplier;
+        private System.Windows.Forms.Button DataGudang;
     }
 }
 
