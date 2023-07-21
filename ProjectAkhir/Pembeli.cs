@@ -122,6 +122,42 @@ namespace ProjectAkhir
 
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string idpembl = txtID.Text;
+            string nama = txtNama.Text;
+            string jk = cmbJK.Text;
+            string almt = txtAlmt.Text;
+            string tlpn = txtTlp.Text;
+
+            if (string.IsNullOrEmpty(idpembl) || string.IsNullOrEmpty(nama) ||
+                string.IsNullOrEmpty(jk) || string.IsNullOrEmpty(almt) ||
+                string.IsNullOrEmpty(tlpn))
+            {
+                MessageBox.Show("Mohon lengkapi semua kolom.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            koneksi.Open();
+
+
+
+            string updateStr = "UPDATE dbo.Pembeli SET ID_Pembeli =@ID_Pembeli, nama_pembeli = @nama_pembeli, alamat = @alamat, JK = @JK, no_telepon = @no_telepon " +
+                   "WHERE ID_Pembeli = @ID_Pembeli";
+            SqlCommand updateCmd = new SqlCommand(updateStr, koneksi);
+            updateCmd.Parameters.AddWithValue("@ID_Pembeli", idpembl);
+            updateCmd.Parameters.AddWithValue("@nama_pembeli", nama);
+            updateCmd.Parameters.AddWithValue("@JK", jk);
+            updateCmd.Parameters.AddWithValue("@alamat", almt);
+            updateCmd.Parameters.AddWithValue("@no_telepon", tlpn);
+            updateCmd.ExecuteNonQuery();
+
+            koneksi.Close();
+            MessageBox.Show("Data berhasil diperbarui.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
+        }
+
         public Pembeli()
         {
             InitializeComponent();

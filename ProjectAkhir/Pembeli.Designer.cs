@@ -46,6 +46,7 @@
             this.txtNama = new System.Windows.Forms.TextBox();
             this.cmbJK = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,6 +99,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.SlateGray;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDelete.Location = new System.Drawing.Point(659, 209);
             this.btnDelete.Name = "btnDelete";
@@ -110,6 +112,7 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.SlateGray;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.SystemColors.Control;
             this.btnClose.Location = new System.Drawing.Point(13, 400);
             this.btnClose.Name = "btnClose";
@@ -122,8 +125,9 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.SlateGray;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAdd.Location = new System.Drawing.Point(272, 363);
+            this.btnAdd.Location = new System.Drawing.Point(202, 363);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(68, 39);
             this.btnAdd.TabIndex = 8;
@@ -134,8 +138,9 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.SlateGray;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSave.Location = new System.Drawing.Point(376, 363);
+            this.btnSave.Location = new System.Drawing.Point(306, 363);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(68, 39);
             this.btnSave.TabIndex = 9;
@@ -146,8 +151,9 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.SlateGray;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnClear.Location = new System.Drawing.Point(480, 363);
+            this.btnClear.Location = new System.Drawing.Point(410, 363);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(68, 39);
             this.btnClear.TabIndex = 10;
@@ -158,6 +164,7 @@
             // btnOpen
             // 
             this.btnOpen.BackColor = System.Drawing.Color.SlateGray;
+            this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.SystemColors.Control;
             this.btnOpen.Location = new System.Drawing.Point(69, 209);
             this.btnOpen.Name = "btnOpen";
@@ -228,6 +235,19 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Data Pembeli";
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.SlateGray;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.Location = new System.Drawing.Point(512, 363);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(83, 39);
+            this.btnUpdate.TabIndex = 19;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
             // Pembeli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,6 +256,7 @@
             this.BackgroundImage = global::ProjectAkhir.Properties.Resources.logoapotekcemara;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbJK);
             this.Controls.Add(this.txtNama);
@@ -254,6 +275,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.DoubleBuffered = true;
             this.Name = "Pembeli";
             this.Text = "Pembeli";
             this.Load += new System.EventHandler(this.Pembeli_Load);
@@ -282,5 +304,6 @@
         private System.Windows.Forms.TextBox txtNama;
         private System.Windows.Forms.ComboBox cmbJK;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnUpdate;
     }
 }

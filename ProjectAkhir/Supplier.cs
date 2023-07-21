@@ -103,6 +103,39 @@ namespace ProjectAkhir
             }
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string idsup = txtIDSup.Text;
+            string nama = txtNamaSup.Text;
+            string almt = txtAlmt.Text;
+            string tlpn = txtNoTlp.Text;
+
+            if (string.IsNullOrEmpty(idsup) || string.IsNullOrEmpty(nama) ||
+                string.IsNullOrEmpty(almt) ||  string.IsNullOrEmpty(tlpn))
+            {
+                MessageBox.Show("Mohon lengkapi semua kolom.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            koneksi.Open();
+
+
+
+            string updateStr = "UPDATE dbo.Supplier SET ID_supplier = @ID_supplier, nama_supplier = @nama_supplier, Alamat_supplier = @Alamat_supplier, No_Telepon = @No_Telepon " +
+                   "WHERE ID_supplier = @ID_supplier";
+            SqlCommand updateCmd = new SqlCommand(updateStr, koneksi);
+            updateCmd.Parameters.AddWithValue("@ID_supplier", idsup);
+            updateCmd.Parameters.AddWithValue("@nama_supplier", nama);
+            updateCmd.Parameters.AddWithValue("@Alamat_supplier", almt);
+            updateCmd.Parameters.AddWithValue("@No_Telepon", tlpn);
+            updateCmd.ExecuteNonQuery();
+
+            koneksi.Close();
+            MessageBox.Show("Data berhasil diperbarui.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             id = txtIDSup.Text;

@@ -149,6 +149,8 @@ namespace ProjectAkhir
             }
         }
 
+        
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             txtIDPL.Text = "";     
@@ -175,11 +177,12 @@ namespace ProjectAkhir
 
             koneksi.Open();
             string strs = "select ID_Pembeli from dbo.Pembeli where ID_Pembeli = @ID_Pembeli, " +
-                "select ID_Pegawai from dbo.Pegawai where ID_Pegawai = @ID_Pegawai";
+            "select ID_Pegawai from dbo.Pegawai where ID_Pegawai = @ID_Pegawai";
             SqlCommand cm = new SqlCommand(strs, koneksi);
             cm.CommandType = CommandType.Text;
             cm.Parameters.Add(new SqlParameter("@ID_Pembeli", idPem));
             cm.Parameters.Add(new SqlParameter("@ID_Pegawai", idPeg));
+
 
             string str = "insert into dbo.Pelayanan(ID_Pelayanan, tgl_pelayanan, ID_Pembeli, ID_Pegawai)" +
                     "values (@ID_Pelayanan, @tgl_pelayanan, @ID_Pembeli, @ID_Pegawai)";

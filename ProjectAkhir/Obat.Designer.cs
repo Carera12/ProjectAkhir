@@ -67,7 +67,7 @@ namespace ProjectAkhir
             // 
             // btnOpen
             // 
-            this.btnOpen.BackColor = System.Drawing.Color.HotPink;
+            this.btnOpen.BackColor = System.Drawing.Color.SlateGray;
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
             this.btnOpen.Location = new System.Drawing.Point(476, 357);
@@ -171,7 +171,7 @@ namespace ProjectAkhir
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.HotPink;
+            this.btnAdd.BackColor = System.Drawing.Color.SlateGray;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(284, 61);
@@ -184,7 +184,7 @@ namespace ProjectAkhir
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.HotPink;
+            this.btnSave.BackColor = System.Drawing.Color.SlateGray;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(284, 131);
@@ -197,7 +197,7 @@ namespace ProjectAkhir
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.HotPink;
+            this.btnClear.BackColor = System.Drawing.Color.SlateGray;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(284, 276);
@@ -210,7 +210,7 @@ namespace ProjectAkhir
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.HotPink;
+            this.btnClose.BackColor = System.Drawing.Color.SlateGray;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Location = new System.Drawing.Point(33, 396);
@@ -263,7 +263,7 @@ namespace ProjectAkhir
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.HotPink;
+            this.btnDelete.BackColor = System.Drawing.Color.SlateGray;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
             this.btnDelete.Location = new System.Drawing.Point(598, 357);
@@ -276,7 +276,7 @@ namespace ProjectAkhir
             // 
             // btnUpdate
             // 
-            this.btnUpdate.BackColor = System.Drawing.Color.HotPink;
+            this.btnUpdate.BackColor = System.Drawing.Color.SlateGray;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUpdate.Location = new System.Drawing.Point(284, 199);
@@ -302,7 +302,7 @@ namespace ProjectAkhir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.BackgroundImage = global::ProjectAkhir.Properties.Resources.logoapotekcemara;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);

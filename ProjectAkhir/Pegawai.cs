@@ -94,6 +94,42 @@ namespace ProjectAkhir
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string idpgw = txtIDPeg.Text;
+            string nama = txtNamaPeg.Text;
+            string jk = cmbJK.Text;
+            string almt = txtAlmt.Text;
+            string tlpn = txtNoTlp.Text;
+
+            if (string.IsNullOrEmpty(idpgw) || string.IsNullOrEmpty(nama) ||
+                string.IsNullOrEmpty(jk) || string.IsNullOrEmpty(almt) ||
+                string.IsNullOrEmpty(tlpn))
+            {
+                MessageBox.Show("Mohon lengkapi semua kolom.", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            koneksi.Open();
+
+
+
+            string updateStr = "UPDATE dbo.Pegawai SET nama_pegawai = @nama_pegawai, JK = @JK, Alamat = @Alamat, no_telepon = @no_telepon " +
+                   "WHERE ID_Pegawai = @ID_Pegawai";
+            SqlCommand updateCmd = new SqlCommand(updateStr, koneksi);
+            updateCmd.Parameters.AddWithValue("@ID_Pegawai", idpgw);
+            updateCmd.Parameters.AddWithValue("@nama_pegawai", nama);
+            updateCmd.Parameters.AddWithValue("@JK", jk);
+            updateCmd.Parameters.AddWithValue("@Alamat", almt);
+            updateCmd.Parameters.AddWithValue("@no_telepon", tlpn);
+            updateCmd.ExecuteNonQuery();
+
+            koneksi.Close();
+            MessageBox.Show("Data berhasil diperbarui.", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dataGridView();
+            refreshform();
+        }
+
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)

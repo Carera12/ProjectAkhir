@@ -101,7 +101,7 @@ namespace ProjectAkhir
             this.btnOpen.BackColor = System.Drawing.Color.MediumPurple;
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnOpen.Location = new System.Drawing.Point(474, 274);
+            this.btnOpen.Location = new System.Drawing.Point(460, 272);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(75, 40);
             this.btnOpen.TabIndex = 10;
