@@ -46,76 +46,74 @@
             this.cmbIDPemb = new System.Windows.Forms.ComboBox();
             this.cmbObat = new System.Windows.Forms.ComboBox();
             this.dtTgl = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(70, 107);
+            this.dataGridView1.Location = new System.Drawing.Point(70, 59);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(572, 174);
+            this.dataGridView1.Size = new System.Drawing.Size(572, 213);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(354, 381);
+            this.label2.Location = new System.Drawing.Point(345, 366);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.Size = new System.Drawing.Size(52, 16);
             this.label2.TabIndex = 2;
             this.label2.Text = "ID Obat";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(354, 346);
+            this.label3.Location = new System.Drawing.Point(345, 331);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 17);
+            this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 3;
             this.label3.Text = "ID Pembeli";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(354, 309);
+            this.label4.Location = new System.Drawing.Point(345, 294);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(130, 17);
+            this.label4.Size = new System.Drawing.Size(126, 16);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tanggal Pembelian";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(89, 381);
+            this.label5.Location = new System.Drawing.Point(80, 366);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 17);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 5;
             this.label5.Text = "Total Bayar";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(89, 346);
+            this.label6.Location = new System.Drawing.Point(80, 331);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(122, 17);
+            this.label6.Size = new System.Drawing.Size(117, 16);
             this.label6.TabIndex = 6;
             this.label6.Text = "Jumlah pembelian";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(89, 309);
+            this.label7.Location = new System.Drawing.Point(80, 294);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 17);
+            this.label7.Size = new System.Drawing.Size(88, 16);
             this.label7.TabIndex = 7;
             this.label7.Text = "ID Pembelian";
             // 
@@ -124,7 +122,7 @@
             this.btnClear.BackColor = System.Drawing.Color.HotPink;
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(728, 171);
+            this.btnClear.Location = new System.Drawing.Point(730, 141);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(58, 49);
             this.btnClear.TabIndex = 9;
@@ -137,7 +135,7 @@
             this.btnSave.BackColor = System.Drawing.Color.HotPink;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(648, 171);
+            this.btnSave.Location = new System.Drawing.Point(650, 141);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(58, 49);
             this.btnSave.TabIndex = 10;
@@ -150,7 +148,7 @@
             this.btnOpen.BackColor = System.Drawing.Color.HotPink;
             this.btnOpen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpen.ForeColor = System.Drawing.Color.White;
-            this.btnOpen.Location = new System.Drawing.Point(728, 107);
+            this.btnOpen.Location = new System.Drawing.Point(730, 77);
             this.btnOpen.Name = "btnOpen";
             this.btnOpen.Size = new System.Drawing.Size(58, 47);
             this.btnOpen.TabIndex = 11;
@@ -163,7 +161,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.HotPink;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(648, 107);
+            this.btnAdd.Location = new System.Drawing.Point(650, 77);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(58, 45);
             this.btnAdd.TabIndex = 12;
@@ -186,21 +184,21 @@
             // 
             // txtTotBay
             // 
-            this.txtTotBay.Location = new System.Drawing.Point(214, 378);
+            this.txtTotBay.Location = new System.Drawing.Point(205, 363);
             this.txtTotBay.Name = "txtTotBay";
             this.txtTotBay.Size = new System.Drawing.Size(116, 22);
             this.txtTotBay.TabIndex = 14;
             // 
             // txtJumPembe
             // 
-            this.txtJumPembe.Location = new System.Drawing.Point(214, 343);
+            this.txtJumPembe.Location = new System.Drawing.Point(205, 328);
             this.txtJumPembe.Name = "txtJumPembe";
             this.txtJumPembe.Size = new System.Drawing.Size(116, 22);
             this.txtJumPembe.TabIndex = 15;
             // 
             // txtIDPemb
             // 
-            this.txtIDPemb.Location = new System.Drawing.Point(214, 306);
+            this.txtIDPemb.Location = new System.Drawing.Point(205, 291);
             this.txtIDPemb.Name = "txtIDPemb";
             this.txtIDPemb.Size = new System.Drawing.Size(116, 22);
             this.txtIDPemb.TabIndex = 16;
@@ -208,44 +206,32 @@
             // cmbIDPemb
             // 
             this.cmbIDPemb.FormattingEnabled = true;
-            this.cmbIDPemb.Location = new System.Drawing.Point(488, 343);
+            this.cmbIDPemb.Location = new System.Drawing.Point(479, 328);
             this.cmbIDPemb.Name = "cmbIDPemb";
-            this.cmbIDPemb.Size = new System.Drawing.Size(202, 24);
+            this.cmbIDPemb.Size = new System.Drawing.Size(139, 24);
             this.cmbIDPemb.TabIndex = 18;
             // 
             // cmbObat
             // 
             this.cmbObat.FormattingEnabled = true;
-            this.cmbObat.Location = new System.Drawing.Point(488, 378);
+            this.cmbObat.Location = new System.Drawing.Point(479, 363);
             this.cmbObat.Name = "cmbObat";
-            this.cmbObat.Size = new System.Drawing.Size(198, 24);
+            this.cmbObat.Size = new System.Drawing.Size(139, 24);
             this.cmbObat.TabIndex = 19;
             // 
             // dtTgl
             // 
-            this.dtTgl.Location = new System.Drawing.Point(490, 306);
+            this.dtTgl.Location = new System.Drawing.Point(477, 291);
             this.dtTgl.Name = "dtTgl";
-            this.dtTgl.Size = new System.Drawing.Size(200, 22);
+            this.dtTgl.Size = new System.Drawing.Size(141, 22);
             this.dtTgl.TabIndex = 20;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(229, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(343, 51);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Data Pembelian";
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.HotPink;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDelete.Location = new System.Drawing.Point(681, 236);
+            this.btnDelete.Location = new System.Drawing.Point(683, 206);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 45);
             this.btnDelete.TabIndex = 23;
@@ -253,24 +239,26 @@
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // panel1
+            // label1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(788, 82);
-            this.panel1.TabIndex = 24;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Stencil", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(268, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(177, 33);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Pembelian";
             // 
             // Pembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.BackgroundImage = global::ProjectAkhir.Properties.Resources.Pohon;
+            this.BackgroundImage = global::ProjectAkhir.Properties.Resources.logoapotekcemara;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dtTgl);
             this.Controls.Add(this.cmbObat);
@@ -294,8 +282,6 @@
             this.Text = "Pembelian";
             this.Load += new System.EventHandler(this.Pembelian_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,8 +307,7 @@
         private System.Windows.Forms.ComboBox cmbIDPemb;
         private System.Windows.Forms.ComboBox cmbObat;
         private System.Windows.Forms.DateTimePicker dtTgl;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }
